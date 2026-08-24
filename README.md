@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="assets/branding/superdummy-icon.png" alt="SuperDummy icon" width="260">
+
 # SuperDummy
 
 ### A friendly 3D POI viewer for 7 Days to Die

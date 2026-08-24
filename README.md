@@ -66,9 +66,11 @@ SuperDummy is under active development. Early releases may contain missing model
 
 The source code is maintained in a separate private repository. This repository is the official home for public documentation, Windows downloads and release notes.
 
-## Screenshots
+## Screenshot
 
-Screenshots and short demonstrations will be added with the first public build.
+![SuperDummy displaying a 7 Days to Die POI interior](assets/screenshots/superdummy-poi-viewer.jpg)
+
+*An in-development build of SuperDummy displaying the interior of a 7 Days to Die POI.*
 
 ## Feedback and bug reports
 

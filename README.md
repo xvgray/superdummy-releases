@@ -2,9 +2,9 @@
 
 <img src="assets/branding/superdummy-icon.png" alt="SuperDummy icon" width="260">
 
-# SuperDummy
+# SuperDummy — 7DTD POI Viewer
 
-### A friendly 3D POI viewer for 7 Days to Die
+### An unofficial, fan-made 3D POI viewer for 7 Days to Die
 
 Explore prefabs and points of interest outside the game with a free-fly camera and configurable real-time rendering.
 

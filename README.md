@@ -19,11 +19,13 @@ Explore prefabs and points of interest outside the game with a free-fly camera a
 
 </div>
 
+> **Unofficial project:** SuperDummy — 7DTD POI Viewer is an independent, fan-made tool. It is not affiliated with, endorsed by or supported by The Fun Pimps.
+
 ---
 
 ## What is SuperDummy?
 
-**SuperDummy** is a standalone desktop viewer for prefabs and points of interest (POIs) from **7 Days to Die**. It reads compatible data and assets from your existing game installation and builds an interactive 3D scene, making it easier to inspect buildings, block placement and prefab details without loading a game world.
+**SuperDummy — 7DTD POI Viewer** (short name: **SuperDummy**) is a standalone desktop viewer for prefabs and points of interest (POIs) from **7 Days to Die**. It reads compatible data and assets from your existing game installation and builds an interactive 3D scene, making it easier to inspect buildings, block placement and prefab details without loading a game world.
 
 The application is written in **Rust**, built with **Bevy** and **bevy_egui**, and uses Vulkan rendering on Windows.
 
@@ -99,7 +101,7 @@ Every contribution helps with development, testing and future features. Thank yo
 
 ## Disclaimer
 
-SuperDummy is an independent, unofficial fan-made tool. It is not affiliated with, endorsed by or supported by The Fun Pimps or the developers and publishers of 7 Days to Die.
+SuperDummy — 7DTD POI Viewer is an independent, unofficial fan-made tool. It is not affiliated with, endorsed by or supported by The Fun Pimps or the developers and publishers of 7 Days to Die.
 
 7 Days to Die and related names, trademarks and game assets belong to their respective owners. SuperDummy does not distribute game assets and requires users to provide their own compatible game installation.
 

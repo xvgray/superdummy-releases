@@ -105,9 +105,11 @@ SuperDummy — 7DTD POI Viewer is an independent, unofficial fan-made tool. It i
 
 7 Days to Die and related names, trademarks and game assets belong to their respective owners. SuperDummy does not distribute game assets and requires users to provide their own compatible game installation.
 
-## Distribution
+## License — Freeware
 
-Unless a specific release states otherwise, no license is granted to modify, redistribute or commercially use the application binaries without the author's written permission.
+SuperDummy is distributed as freeware. You may download and use the official application binaries free of charge for personal or commercial purposes, subject to the license terms.
+
+See the full **[SuperDummy Freeware License](LICENSE.md)**.
 
 ---
 

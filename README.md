@@ -15,7 +15,7 @@ Explore prefabs and points of interest outside the game with a free-fly camera a
 [![Downloads](https://img.shields.io/github/downloads/xvgray/superdummy-releases/total?label=downloads&color=2EA44F)](https://github.com/xvgray/superdummy-releases/releases)
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy_Me_a_Coffee-support-FFDD00?logo=buymeacoffee&logoColor=000000)](https://buymeacoffee.com/bullrider)
 
-**[Download the latest release](https://github.com/xvgray/superdummy-releases/releases/latest)** · [Report an issue](https://github.com/xvgray/superdummy-releases/issues) · [Support development](https://buymeacoffee.com/bullrider)
+**[Download the latest release](https://github.com/xvgray/superdummy-releases/releases/latest)** · [Changelog](CHANGELOG.md) · [Report an issue](https://github.com/xvgray/superdummy-releases/issues) · [Support development](https://buymeacoffee.com/bullrider)
 
 </div>
 
@@ -55,7 +55,7 @@ The application is written in **Rust**, built with **Bevy** and **bevy_egui**, a
 
 The latest public Windows archive is available on the [Releases](https://github.com/xvgray/superdummy-releases/releases) page.
 
-When a build is published:
+To install SuperDummy:
 
 1. Download the ZIP archive attached to the newest release.
 2. Extract it to a writable directory.

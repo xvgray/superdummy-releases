@@ -53,7 +53,7 @@ The application is written in **Rust**, built with **Bevy** and **bevy_egui**, a
 
 ## Installation
 
-A public build is not available yet. The first Windows package will appear on the [Releases](https://github.com/xvgray/superdummy-releases/releases) page.
+The latest public Windows archive is available on the [Releases](https://github.com/xvgray/superdummy-releases/releases) page.
 
 When a build is published:
 

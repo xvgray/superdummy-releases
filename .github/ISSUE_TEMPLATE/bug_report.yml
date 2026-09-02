@@ -1,0 +1,116 @@
+name: Bug report
+description: Report a reproducible problem with SuperDummy
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve SuperDummy.
+
+        Please do not upload or attach copyrighted 7 Days to Die game assets. Screenshots and relevant log excerpts are welcome.
+
+  - type: input
+    id: superdummy-version
+    attributes:
+      label: SuperDummy version
+      description: The version shown in the application or archive name.
+      placeholder: v0.1.0-pre.1
+    validations:
+      required: true
+
+  - type: input
+    id: game-version
+    attributes:
+      label: 7 Days to Die version
+      description: Include the full game version and build when possible.
+      placeholder: V3.0 (b...)
+    validations:
+      required: true
+
+  - type: input
+    id: windows-version
+    attributes:
+      label: Windows version
+      placeholder: Windows 11 24H2
+    validations:
+      required: true
+
+  - type: input
+    id: gpu
+    attributes:
+      label: Graphics card
+      placeholder: AMD Radeon 680M / NVIDIA GeForce RTX 3060
+    validations:
+      required: true
+
+  - type: input
+    id: poi
+    attributes:
+      label: Affected POI
+      description: Provide the prefab name. For a custom POI, state that it is custom.
+      placeholder: apartments_06
+    validations:
+      required: true
+
+  - type: dropdown
+    id: problem-area
+    attributes:
+      label: Problem area
+      options:
+        - Loading or cache
+        - Geometry or block placement
+        - Textures or materials
+        - Terrain
+        - Models, trees or billboards
+        - Lighting or rendering
+        - User interface or controls
+        - Crash
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Problem description
+      description: Explain what happened and what you expected to happen.
+      placeholder: Describe the visible or functional problem.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Start SuperDummy
+        2. Load ...
+        3. Enable ...
+        4. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Paste only the relevant section. Remove personal paths or other private information if necessary.
+      render: shell
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or additional context
+      description: Drag screenshots here or add any other information that may help.
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmation
+      options:
+        - label: I searched existing issues and did not find the same problem.
+          required: true
+        - label: I have not attached copyrighted game assets.
+          required: true

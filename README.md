@@ -4,7 +4,7 @@
 
 # SuperDummy — 7DTD POI Viewer
 
-### An unofficial, fan-made 3D POI viewer for 7 Days to Die
+### An unofficial, fan-made 3D prefab and POI viewer for 7 Days to Die
 
 Explore prefabs and points of interest outside the game with a free-fly camera and configurable real-time rendering.
 
@@ -25,13 +25,15 @@ Explore prefabs and points of interest outside the game with a free-fly camera a
 
 ## What is SuperDummy?
 
-**SuperDummy — 7DTD POI Viewer** (short name: **SuperDummy**) is a standalone desktop viewer for prefabs and points of interest (POIs) from **7 Days to Die**. It reads compatible data and assets from your existing game installation and builds an interactive 3D scene, making it easier to inspect buildings, block placement and prefab details without loading a game world.
+**SuperDummy — 7DTD POI Viewer** (short name: **SuperDummy**) is a standalone desktop viewer for prefabs and points of interest (POIs) from **7 Days to Die**. It reads compatible prefab data and assets from your existing game installation and builds an interactive 3D scene, making it easier to inspect buildings, block placement and prefab details without loading a game world.
+
+In 7 Days to Die, explorable POIs are built from prefab data. SuperDummy can inspect compatible prefab files whether they represent complete POIs or supporting world-generation elements. In other words, every POI is a prefab, but not every prefab is necessarily a POI.
 
 The application is written in **Rust**, built with **Bevy** and **bevy_egui**, and uses Vulkan rendering on Windows.
 
 ## Features
 
-- Explore 7 Days to Die POIs in an interactive 3D view
+- Explore 7 Days to Die prefabs and POIs in an interactive 3D view
 - Navigate freely with a fly camera
 - Automatically center the camera on a loaded prefab
 - Build geometry from block and prefab data
@@ -86,7 +88,7 @@ For rendering or loading problems, please include:
 - 7 Days to Die version
 - Windows version
 - Graphics card model
-- Name of the affected POI
+- Name of the affected prefab or POI
 - A screenshot and the relevant part of the application log, if available
 
 Please do not attach copyrighted game assets.

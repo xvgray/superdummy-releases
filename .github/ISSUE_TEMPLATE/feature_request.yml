@@ -1,0 +1,69 @@
+name: Feature request
+description: Suggest an improvement or a new capability for SuperDummy
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting an improvement.
+
+        SuperDummy is an experimental hobby project, so accepted ideas may be implemented gradually and priorities can change.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case
+      description: What are you trying to do, and what currently makes it difficult?
+      placeholder: Describe the practical problem this feature would solve.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: Describe how you would like the feature to work.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Feature area
+      options:
+        - POI loading and browsing
+        - Rendering and materials
+        - Terrain
+        - Models, trees and vegetation
+        - Diagnostics and validation
+        - Performance and memory use
+        - User interface and controls
+        - POI editing or export
+        - Compatibility
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Describe any workarounds or alternative approaches you have considered.
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add mock-ups, screenshots, examples or links that clarify the request.
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmation
+      options:
+        - label: I searched existing issues and did not find the same request.
+          required: true
+        - label: This request does not require distributing copyrighted game assets.
+          required: true

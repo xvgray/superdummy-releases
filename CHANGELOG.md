@@ -4,7 +4,7 @@ All notable changes to SuperDummy will be documented in this file.
 
 SuperDummy is currently in an experimental pre-release stage. Features, file formats and behaviour may change between releases.
 
-## [Unreleased]
+## [0.1.0-pre.2] - In development
 
 ### Added
 
@@ -72,5 +72,5 @@ SuperDummy is currently in an experimental pre-release stage. Features, file for
 - Runtime logging
 - English user interface
 
-[Unreleased]: https://github.com/xvgray/superdummy-releases/compare/v0.1.0-pre.1...HEAD
+[0.1.0-pre.2]: https://github.com/xvgray/superdummy-releases/compare/v0.1.0-pre.1...HEAD
 [0.1.0-pre.1]: https://github.com/xvgray/superdummy-releases/releases/tag/v0.1.0-pre.1

@@ -76,7 +76,7 @@ The source code is maintained in a separate private repository. This repository 
 
 ![SuperDummy displaying a 7 Days to Die POI interior](assets/screenshots/superdummy-poi-viewer.jpg)
 
-*An in-development build of SuperDummy displaying the interior of a 7 Days to Die POI.*
+*SuperDummy v0.1.0-pre.2 displaying a fully rendered 7 Days to Die POI with terrain, vegetation and presentation lighting.*
 
 ## Feedback and bug reports
 

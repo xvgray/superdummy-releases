@@ -6,13 +6,7 @@ SuperDummy is currently in an experimental pre-release stage. Features, file for
 
 ## [Unreleased]
 
-### In progress
-
-- Reading terrain texture IDs from `blocks.xml`
-- Resolving terrain top and side textures
-- Loading diffuse terrain textures from `terraintextures_assets_all.bundle`
-- World-space terrain texture mapping
-- Full terrain texture blending
+Nothing yet.
 
 ## [0.1.0-pre.3] - 2026-09-11
 
@@ -69,20 +63,35 @@ SuperDummy is currently in an experimental pre-release stage. Features, file for
 - Automatic installation discovery targets Steam; other or portable installations use the folder picker
 - Volumetric fog is not available in pre.3
 
-## [0.1.0-pre.2] - 2026-09-02
+## [0.1.0-pre.2] - 2026-09-04
 
 ### Added
 
-- Terrain rendering: regular-cell Transvoxel mesh generation from the POI density grid
-- Vegetation rendering and presentation / atmospheric rendering controls
-- Native GPU upload for BC1, BC3 and BC7 textures, with complete mipmap chains
-- Correct Linear and sRGB texture handling based on Unity `m_ColorSpace`
-- RGBA texture fallback when native BC upload is unavailable
+- Experimental Transvoxel-based prefab terrain rendering
+- TTS density parsing and correct density-to-block pairing after the Z-axis coordinate conversion
 - `PoiGrid` terrain representation and density lookup
 - Terrain diagnostics, real POI scans and density histograms
-- Complete POI loading-time measurement (preparation through the final scene swap)
-- Optional FPS counter and a persistent FPS counter setting
-- TTS density parsing
+- Fixed-point terrain vertex interpolation and generated terrain normals
+- Worker-thread terrain generation
+- Terrain textures with top and side material resolution
+- Diffuse terrain textures loaded from `terraintextures_assets_all.bundle`
+- World-space terrain texture mapping and three-texture blending
+- Initial DistantDecoTree and vegetation support
+- SpeedTree UV and material support
+- Alpha-cutout foliage rendering
+- View menu toggles for Terrain, Shape Blocks, Props and Trees
+- `Show All` view reset
+- Lighting presets: Editor, Sunny, Overcast and Golden Hour
+- Fog modes: Off, Atmospheric and Volumetric
+- Native GPU upload for BC1, BC3 and BC7 textures
+- Complete texture mipmap chains instead of loading only mip level 0
+- Correct Linear and sRGB texture handling based on Unity `m_ColorSpace`
+- RGBA texture fallback when native BC upload is unavailable
+- Complete POI loading-time measurement, covering preparation through the final scene swap
+- Optional FPS counter available under `Settings → Graphics → Show FPS counter`
+- Persistent FPS counter setting
+- Regression tests for terrain placement at voxel and grid boundaries
+- Double-sided terrain rendering without an artificial skirt or bottom cap
 
 ### Changed
 
@@ -91,6 +100,7 @@ SuperDummy is currently in an experimental pre-release stage. Features, file for
 - Terrain cells are no longer treated as unsupported blocks
 - Corrected terrain placement relative to regular blocks and the voxel grid
 - Terrain is rendered with `cull_mode: None`, matching its visibility from below in 7 Days to Die
+- Improved presentation controls for lighting and fog
 
 ### Fixed
 
@@ -98,6 +108,7 @@ SuperDummy is currently in an experimental pre-release stage. Features, file for
 - Fixed terrain density pairing after the Z-axis flip
 - Fixed terrain triangle winding after coordinate conversion
 - Fixed the terrain half-block placement offset
+- Fixed vegetation transparency
 
 ### Performance
 

@@ -16,7 +16,7 @@ body:
     attributes:
       label: SuperDummy version
       description: The version shown in the application or archive name.
-      placeholder: v0.1.0-pre.1
+      placeholder: v0.1.0-pre.3
     validations:
       required: true
 

@@ -99,6 +99,12 @@ SuperDummy is under active development. Early releases may contain missing model
 
 The source code is maintained in a separate private repository. This repository is the official home for public documentation, Windows downloads and release notes.
 
+## A note from the author
+
+Fair warning: SuperDummy has fairly demanding graphics requirements — and, as a
+bonus, it looks *worse* than the game it is showing you. The author gives it a
+solid 30% and is working hard on making it look even worse. ;)
+
 ## Screenshots
 
 ![SuperDummy v0.1.0-pre.3 displaying a 7 Days to Die POI with presentation lighting and surrounding Scenic Terrain](assets/screenshots/superdummy-pre3-hero.png)

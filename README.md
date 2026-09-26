@@ -6,7 +6,7 @@
 
 ### An unofficial, fan-made 3D prefab and POI viewer for 7 Days to Die
 
-Explore prefabs and points of interest outside the game with a free-fly camera and configurable real-time rendering.
+Explore game and local prefabs in 3D, create cinematic orbit shots, and save thumbnails for your own projects.
 
 [![Platform](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D4?logo=windows&logoColor=white)](#requirements)
 [![Built with Rust](https://img.shields.io/badge/built%20with-Rust-000000?logo=rust&logoColor=white)](https://www.rust-lang.org/)
@@ -15,7 +15,7 @@ Explore prefabs and points of interest outside the game with a free-fly camera a
 [![Downloads](https://img.shields.io/github/downloads/xvgray/superdummy-releases/total?label=downloads&color=2EA44F)](https://github.com/xvgray/superdummy-releases/releases)
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy_Me_a_Coffee-support-FFDD00?logo=buymeacoffee&logoColor=000000)](https://buymeacoffee.com/bullrider)
 
-**[Download the latest release](https://github.com/xvgray/superdummy-releases/releases)** · [Changelog](CHANGELOG.md) · [Report an issue](https://github.com/xvgray/superdummy-releases/issues) · [Support development](https://buymeacoffee.com/bullrider)
+**[Download 0.1.0 — Water Edition](https://github.com/xvgray/superdummy-releases/releases/tag/v0.1.0)** · [Release notes](https://github.com/xvgray/superdummy-releases/releases/tag/v0.1.0) · [Earlier changelog](CHANGELOG.md) · [Report an issue](https://github.com/xvgray/superdummy-releases/issues) · [Support development](https://buymeacoffee.com/bullrider)
 
 </div>
 
@@ -31,40 +31,29 @@ In 7 Days to Die, explorable POIs are built from prefab data. SuperDummy can ins
 
 The application is written in **Rust**, built with **Bevy** and **bevy_egui**, and uses Vulkan rendering on Windows.
 
-## What's new in pre.3
+## 0.1.0 — Water Edition
 
-- **Scenic Terrain** — a generated 512 × 512 m landscape (hills, mountains, rocks
-  and snow) that surrounds the loaded POI.
-- A dynamic **day–night cycle** with a moving Sun and Moon, twilight, stars and a
-  night sky.
-- Native **prefab Point/Spot lights**, lamp controls, optional lamp shadows and
-  animated torches and candles.
-- Improved **PBR materials** for block geometry, glass, vegetation and terrain.
-- New **image settings** (exposure, contrast, saturation, gamma) and shadow
-  quality levels.
-- Reliable **game installation detection** across all Steam drives, plus a manual
-  folder picker.
-- Much **faster POI loading** through caching and a reworked loader.
+Water Edition brings animated water surfaces and refraction, improved terrain transitions, and fixes to materials and lighting. It also adds tools for presenting and previewing your own prefabs.
 
-See the [changelog](CHANGELOG.md) for the full list.
+- **Water preview** — animated surface detail and refraction, with improved shore coverage.
+- **Local prefabs** — switch between **GAME PREFABS** and **LOCAL PREFABS**, or choose a custom folder.
+- **Prefab thumbnails** — save a clean camera screenshot for a local prefab, with confirmation before replacing an existing image.
+- **Cinema orbit** — one full rotation or a continuous loop, selectable direction, and 30 / 60 / 120-second rotations.
+- **Tilt-shift** — an optional miniature-style effect during orbit.
+- **Fullscreen** — press **F11** to toggle borderless fullscreen.
+- **Lamp shadows** — choose a shadow-casting lamp limit of 3, 8 or 12; the default is 8.
+- **Built-in Help** — controls, features and practical graphics settings explained inside the application.
 
-## Features
+[Read the 0.1.0 release notes](https://github.com/xvgray/superdummy-releases/releases/tag/v0.1.0).
 
-- Explore 7 Days to Die prefabs and POIs in an interactive 3D view
-- **Scenic Terrain** — a generated landscape that surrounds the loaded POI as a
-  presentation background
-- A dynamic **time of day** — a moving Sun and Moon, twilight, stars and a night
-  sky
-- Native **prefab lights** (Point and Spot) with lamp controls and lamp shadows
-- Modern **PBR materials** for blocks, glass, vegetation and terrain
-- New **image settings** — exposure, contrast, saturation and gamma
-- Automatic and manual **game installation** detection
-- Staged, responsive loading with persistent caches
-- Navigate freely with a fly camera
-- Build geometry from block and prefab data
-- Display block models from your game installation
-- Save application preferences
-- Read compatible XML, `.blocks.nim` and `.tts` data
+## Explore and present
+
+- Navigate with a free-fly camera and inspect prefab geometry and models.
+- Surround the POI with generated **Scenic Terrain** for presentation.
+- Adjust the time of day, Sun and Moon, exposure, contrast, saturation and gamma.
+- Preview prefab lights, animated torches and candles, and PBR materials for blocks, glass, vegetation and terrain.
+- Load compatible prefabs using automatic or manual game installation detection and persistent caches.
+- Keep application preferences between sessions.
 
 ## Requirements
 
@@ -77,21 +66,49 @@ See the [changelog](CHANGELOG.md) for the full list.
 
 ## Installation
 
-The latest public Windows archive is available on the [Releases](https://github.com/xvgray/superdummy-releases/releases) page.
+Download **[SuperDummy 0.1.0 for Windows x64](https://github.com/xvgray/superdummy-releases/releases/download/v0.1.0/SuperDummy-0.1.0-water-edition-windows-x64.zip)**, or visit the [release page](https://github.com/xvgray/superdummy-releases/releases/tag/v0.1.0) for notes and the SHA256 checksum.
 
-To install SuperDummy:
+1. Extract the **entire ZIP**. Keep the `assets` and `resources` folders beside `superdummy.exe`.
+2. Run `superdummy.exe`.
+3. The application tries to find your game installation. Select the game folder if prompted.
+4. Open **Load POI** and choose **GAME PREFABS** or **LOCAL PREFABS**.
 
-1. Download the ZIP archive attached to the newest release.
-2. Extract it to a writable folder and keep the `assets` and `resources` folders
-   next to `superdummy.exe`.
-3. Run `superdummy.exe`.
-4. SuperDummy automatically finds your 7 Days to Die installation through Steam,
-   including libraries on other drives.
-5. If detection fails, choose your 7 Days to Die folder in the **Game
-   installation** window.
-6. Click **Load POI** and select a prefab.
+The default local prefab folder is `%APPDATA%\\7DaysToDie\\LocalPrefabs`; you can select another folder in the browser.
+
+**Download the named Windows ZIP, not GitHub's automatic “Source code” archives.** This repository contains public release documentation, not the application source.
 
 Windows SmartScreen may warn about unsigned early builds. Always verify that the archive was downloaded directly from this repository.
+
+## Quick controls
+
+| Action | Where to find it |
+| --- | --- |
+| Load game or local prefabs | **Load POI** |
+| Start an orbit, enable looping or tilt-shift | **Tools → Cinema orbit…** |
+| Stop an orbit, including when the interface is hidden | **Esc** |
+| Save a thumbnail for the loaded local prefab | **Tools → Save prefab thumbnail…** |
+| Toggle fullscreen / windowed mode | **F11** |
+| Read the user guide | **Help → User guide** |
+
+Orbit controls camera movement; use an external screen recorder to capture video. Leave enough room around the prefab, as the camera does not avoid obstacles.
+
+Thumbnails are saved as **280 × 210 JPEG** images. Existing thumbnails are replaced only after confirmation. This action is available for local prefabs only.
+
+## Compatibility and performance
+
+**Tested with 7 Days to Die V 3.2.0 (b10), Steam build 24994517.** Other game versions have not been confirmed; detecting an installation does not guarantee compatibility.
+
+- A separate game installation is required. Game assets are not bundled.
+- Local prefabs using base-game blocks are supported. Full support for mod-defined blocks and assets is not included.
+- Water is a visual approximation, not a fluid simulation. Scenic Terrain is a presentation background, not an exportable game world.
+- Higher lamp shadow limits and tilt-shift can reduce frame rate.
+- The depth prepass option is experimental and requires an application restart.
+
+## Settings and local data
+
+Settings, logs and caches are stored under `%LOCALAPPDATA%\\SuperDummy`. Preferences are saved in `settings.xml`, independently of the folder from which you launch the application.
+
+When the new settings file does not yet exist, SuperDummy can migrate an older `settings.xml` from beside the executable or from the working directory. The original file is left in place.
 
 ## Project status
 
@@ -106,6 +123,8 @@ bonus, it looks *worse* than the game it is showing you. The author gives it a
 solid 30% and is working hard on making it look even worse. ;)
 
 ## Screenshots
+
+The gallery below shows **0.1.0-pre.3**, an earlier build. It does not show all Water Edition improvements.
 
 ![SuperDummy v0.1.0-pre.3 displaying a 7 Days to Die POI with presentation lighting and surrounding Scenic Terrain](assets/screenshots/superdummy-pre3-hero.png)
 

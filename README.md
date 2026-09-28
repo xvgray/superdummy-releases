@@ -24,24 +24,20 @@ View prefabs without launching a game world, analyse POI data and sleeper volume
 
 *Rendered by **SuperDummy 0.1.0 — Water Edition**.*
 
-![SuperDummy 0.1.0 — Water Edition displaying a 7 Days to Die POI with presentation lighting and surrounding Scenic Terrain](assets/screenshots/superdummy-0.1.0-hero.png)
+![SuperDummy 0.1.0 — Water Edition displaying a 7 Days to Die POI with presentation lighting and surrounding Scenic Terrain](assets/screenshots/0.1.0/superdummy-0.1.0-hero.png)
 
 <table>
   <tr>
-    <td><img src="assets/screenshots/superdummy-0.1.0-gallery-1.png" alt="Scene rendered by SuperDummy 0.1.0"></td>
-    <td><img src="assets/screenshots/superdummy-0.1.0-gallery-2.png" alt="Scene rendered by SuperDummy 0.1.0"></td>
+    <td><img src="assets/screenshots/0.1.0/superdummy-0.1.0-gallery-1.png" alt="Scene rendered by SuperDummy 0.1.0"></td>
+    <td><img src="assets/screenshots/0.1.0/superdummy-0.1.0-gallery-2.png" alt="Scene rendered by SuperDummy 0.1.0"></td>
   </tr>
   <tr>
-    <td><img src="assets/screenshots/superdummy-0.1.0-gallery-3.png" alt="Scene rendered by SuperDummy 0.1.0"></td>
-    <td><img src="assets/screenshots/superdummy-0.1.0-gallery-4.png" alt="Scene rendered by SuperDummy 0.1.0"></td>
-  </tr>
-  <tr>
-    <td><img src="assets/screenshots/superdummy-0.1.0-gallery-5.png" alt="Scene rendered by SuperDummy 0.1.0"></td>
-    <td></td>
+    <td><img src="assets/screenshots/0.1.0/superdummy-0.1.0-blocks-hidden.png" alt="SuperDummy 0.1.0 with prefab blocks hidden"></td>
+    <td><img src="assets/screenshots/0.1.0/superdummy-0.1.0-sleeper-statistics.png" alt="SuperDummy 0.1.0 sleeper statistics panel"></td>
   </tr>
 </table>
 
-*More scenes rendered by SuperDummy 0.1.0.*
+*More views rendered by SuperDummy 0.1.0, including a blocks-hidden view and the sleeper statistics panel.*
 
 ---
 

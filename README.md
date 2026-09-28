@@ -22,22 +22,26 @@ View prefabs without launching a game world, analyse POI data and sleeper volume
 
 ## Screenshots
 
-*Screenshots from **0.1.0-pre.3**, an earlier build — they do not show the Water Edition improvements.*
+*Rendered by **SuperDummy 0.1.0 — Water Edition**.*
 
-![SuperDummy v0.1.0-pre.3 displaying a 7 Days to Die POI with presentation lighting and surrounding Scenic Terrain](assets/screenshots/superdummy-pre3-hero.png)
+![SuperDummy 0.1.0 — Water Edition displaying a 7 Days to Die POI with presentation lighting and surrounding Scenic Terrain](assets/screenshots/superdummy-0.1.0-hero.png)
 
 <table>
   <tr>
-    <td><img src="assets/screenshots/superdummy-pre3-gallery-1.png" alt="Scene rendered by SuperDummy v0.1.0-pre.3"></td>
-    <td><img src="assets/screenshots/superdummy-pre3-gallery-2.png" alt="Scene rendered by SuperDummy v0.1.0-pre.3"></td>
+    <td><img src="assets/screenshots/superdummy-0.1.0-gallery-1.png" alt="Scene rendered by SuperDummy 0.1.0"></td>
+    <td><img src="assets/screenshots/superdummy-0.1.0-gallery-2.png" alt="Scene rendered by SuperDummy 0.1.0"></td>
   </tr>
   <tr>
-    <td><img src="assets/screenshots/superdummy-pre3-gallery-3.png" alt="Scene rendered by SuperDummy v0.1.0-pre.3"></td>
+    <td><img src="assets/screenshots/superdummy-0.1.0-gallery-3.png" alt="Scene rendered by SuperDummy 0.1.0"></td>
+    <td><img src="assets/screenshots/superdummy-0.1.0-gallery-4.png" alt="Scene rendered by SuperDummy 0.1.0"></td>
+  </tr>
+  <tr>
+    <td><img src="assets/screenshots/superdummy-0.1.0-gallery-5.png" alt="Scene rendered by SuperDummy 0.1.0"></td>
     <td></td>
   </tr>
 </table>
 
-*More scenes rendered by SuperDummy v0.1.0-pre.3.*
+*More scenes rendered by SuperDummy 0.1.0.*
 
 ---
 

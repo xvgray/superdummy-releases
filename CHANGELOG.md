@@ -2,7 +2,7 @@
 
 All notable changes to SuperDummy will be documented in this file.
 
-SuperDummy is currently in an experimental pre-release stage. Features, file formats and behaviour may change between releases.
+SuperDummy 0.1.0 — Water Edition is the first stable release. The project remains under active development, and features or behaviour may still change in future releases.
 
 ## [Unreleased]
 

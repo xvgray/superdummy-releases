@@ -8,6 +8,38 @@ SuperDummy 0.1.0 — Water Edition is the first stable release. The project rema
 
 Nothing yet.
 
+## [0.1.0] - 2026-09-26
+
+First stable release — **Water Edition**, following the three 0.1.0 previews.
+
+### Added
+
+- Static prefab water preview with animated procedural ripples, screen-space refraction and an independent `View → Water` toggle
+- `GAME PREFABS` / `LOCAL PREFABS` browser modes, with a configurable local prefab folder
+- Local prefab thumbnail capture: a clean 280 × 210 JPEG camera view, with confirmation before replacing an existing image
+- Cinema orbit with single or looping rotations, selectable direction, 30 / 60 / 120-second durations and an optional hidden interface
+- Optional tilt-shift presentation effect during cinema orbit
+- Borderless fullscreen through `F11` or `View → Fullscreen`, including during cinema orbit
+- Bundled user guide under `Help → User guide`
+- POI statistics with TXT/CSV export and sleeper statistics
+- Experimental depth prepass setting, disabled by default and applied after a restart
+
+### Changed
+
+- Improved water shore coverage and terrain transitions
+- Improved vegetation transparency, glass, screen lighting, and animated torch and candle presentation
+- Lamp shadow limits of 3, 8 or 12 nearby shadow-casting lamps, with 8 as the default
+- Settings now use `%LOCALAPPDATA%\SuperDummy\settings.xml`, with one-time migration from older locations and a backup of corrupt settings files
+- Runtime assets and Help are located relative to the executable, so the package can be launched from another working directory
+
+### Known limitations
+
+- Water remains a static visual approximation: fluid simulation, flow masks, foam, underwater effects and water collision are not reproduced
+- Mod-defined blocks and assets are not fully supported; local prefabs still use assets from the user's base-game installation
+- Scenic Terrain is presentation scenery, without world streaming or collision
+- Tested with 7 Days to Die V 3.2.0 (b10), Steam build 24994517; other versions have not been verified
+- Large POIs, higher lamp shadow limits and tilt-shift can increase resource use or reduce frame rate
+
 ## [0.1.0-pre.3] - 2026-09-11
 
 ### Added
@@ -132,7 +164,8 @@ Nothing yet.
 - Runtime logging
 - English user interface
 
-[Unreleased]: https://github.com/xvgray/superdummy-releases/compare/v0.1.0-pre.3...HEAD
+[Unreleased]: https://github.com/xvgray/superdummy-releases/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/xvgray/superdummy-releases/releases/tag/v0.1.0
 [0.1.0-pre.3]: https://github.com/xvgray/superdummy-releases/compare/v0.1.0-pre.2...v0.1.0-pre.3
 [0.1.0-pre.2]: https://github.com/xvgray/superdummy-releases/compare/v0.1.0-pre.1...v0.1.0-pre.2
 [0.1.0-pre.1]: https://github.com/xvgray/superdummy-releases/releases/tag/v0.1.0-pre.1

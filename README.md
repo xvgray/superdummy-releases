@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/branding/superdummy-icon.png" alt="SuperDummy icon" width="240">
+<img src="assets/branding/superdummy-icon.png" alt="SuperDummy icon" width="180">
 
 # SuperDummy
 
@@ -8,25 +8,99 @@
 
 *From viewing to creating.*
 
-A free, standalone prefab editor and inspection tool for **7 Days to Die**.
+[![Total GitHub downloads](https://img.shields.io/github/downloads/xvgray/superdummy-releases/total?style=flat-square&label=downloads&color=2EA44F&logo=github)](https://github.com/xvgray/superdummy-releases/releases)
+[![Windows 10 and 11](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D4?style=flat-square&logo=windows&logoColor=white)](#what-you-need)
+[![Built with Rust](https://img.shields.io/badge/built%20with-Rust-000000?style=flat-square&logo=rust&logoColor=white)](https://rust-lang.org/)
+[![Powered by Bevy](https://img.shields.io/badge/powered%20by-Bevy-232326?style=flat-square&logo=bevy&logoColor=white)](https://bevy.org/)
+[![SuperDummy on Nexus Mods](https://img.shields.io/badge/Nexus%20Mods-SuperDummy-DA8E35?style=flat-square&logo=nexusmods&logoColor=white)](https://www.nexusmods.com/7daystodie/mods/12367)
+[![Freeware](https://img.shields.io/badge/license-Freeware-648A5C?style=flat-square)](LICENSE.md)
 
-Build a new POI, edit an existing one, configure supported doors, lights and sleeper areas, and save it for use in the game. You can also explore and present prefabs without launching a game world.
+**Build, explore and edit your own locations for 7 Days to Die.**
+
+A prefab, also called a POI, is a building or place the game can put in its world. SuperDummy lets you work on one without opening a game world — no coding or Unity installation needed.
 
 [![Download for Windows](https://img.shields.io/badge/Download%20for%20Windows-0.2.0%20x64-2EA44F?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/xvgray/superdummy-releases/releases/download/v0.2.0/SuperDummy-0.2.0-forge-edition-windows-x64.zip)
 
-[Release notes](https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.0) · [What can you do with SuperDummy?](#what-can-you-do-with-superdummy) · [Report an issue](https://github.com/xvgray/superdummy-releases/issues) · [Support development](https://buymeacoffee.com/bullrider)
+[Release notes](https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.0) · [First steps](#start-in-a-few-minutes) · [What can I make?](#what-you-can-do) · [Report an issue](https://github.com/xvgray/superdummy-releases/issues) · [Support development](https://buymeacoffee.com/bullrider)
 
 **Windows 10/11, 64-bit · Requires your own 7 Days to Die installation · No game assets included**
 
 </div>
 
----
+> [!IMPORTANT]
+> **Please save your work often.** This version is still in development and may contain bugs. There is **no emergency autosave or recovery after a crash**. Unsaved work can be lost if the program closes unexpectedly. Use **Ctrl+S** regularly and **Save Prefab As…** to keep separate copies before major changes.
+>
+> **Water can be previewed, but cannot be edited in 0.2.** Automatic saving, crash recovery and tools for editing whole regions are not included in this release.
 
-## Screenshots
+## What you can do
 
-*Earlier screenshots from **SuperDummy 0.1.0 — Water Edition**, showing the preview and presentation tools. The new editing features are described below.*
+- **Start a new building** with an empty workspace or flat ground, or open an existing prefab as a local copy.
+- **Build and change individual objects** — place, move, copy, turn and remove them, with a preview and Undo/Redo.
+- **Find your favourite parts quickly** in the block Library, choose variants and pin frequently used blocks to Quick Blocks.
+- **Set up supported doors and lights** — choose Open/Closed, Locked/Unlocked or On/Off, and edit supported writable signs.
+- **Prepare your POI for the game** — choose its world locations, set the ground level, add road-connection markers and edit the supplied basic enemy-spawn areas.
+- **Explore and show your work** — fly around, inspect interiors, read statistics, save thumbnails and use the cinematic orbit camera.
+
+SuperDummy reads blocks, models and textures from your own game installation. It does not modify the installed game files or include game assets in its download.
+
+## Start in a few minutes
+
+1. Download **[SuperDummy 0.2.0 for Windows x64](https://github.com/xvgray/superdummy-releases/releases/download/v0.2.0/SuperDummy-0.2.0-forge-edition-windows-x64.zip)** and extract the **entire ZIP**.
+2. Keep the **assets** and **resources** folders beside **superdummy.exe**. There is no installer, and you do not need to install Rust or Bevy.
+3. Run `superdummy.exe`. SuperDummy tries to find your game installation; select the game folder if prompted.
+4. Choose **New Prefab…** to start building, or **Load POI…** to open an existing prefab.
+5. Open **Help > User guide > Your first prefab** for a complete beginner walkthrough. **Tab** switches between the pointer and camera control; **Ctrl+S** saves your work.
+
+The default local prefab folder is `%APPDATA%\7DaysToDie\LocalPrefabs`; you can choose another folder in the browser. Settings, logs and caches are stored in `%LOCALAPPDATA%\SuperDummy` (preferences in `settings.xml`).
+
+> **Download the named Windows ZIP, not GitHub's automatic “Source code” archives.** This repository contains public release documentation, not the application source.
+
+When updating, unpack the new version into a separate folder so old program files are not mixed with the new ones. Your saved local prefabs and application preferences stay in their own folders.
+
+### A few useful controls
+
+| What you want | What to do |
+| --- | --- |
+| Look around or return to the pointer | Press **Tab**. |
+| Move the camera | In camera control, use **WASD**; **Space** goes up and **Alt** goes down. |
+| Choose something to build with | Click **Add Block…**. |
+| Turn the block you are holding | Use the **mouse wheel** while pointing at the scene. |
+| Cancel a placement | Press **Esc**. |
+| Undo an edit | Press **Ctrl+Z** in Edit mode. |
+| Save your work | Press **Ctrl+S**. |
+
+## Try your building in the game
+
+1. Open **Tools > Prefab Settings…**, choose a suitable location and press **OK**. For a first isolated house, **Outside settlements** is a simple choice.
+2. Press **Ctrl+S** and save in the game's **LocalPrefabs** folder, normally `%APPDATA%\7DaysToDie\LocalPrefabs`. Keep the `.tts`, `.blocks.nim` and `.xml` together.
+3. Restart the game and generate a **new** world. The generator can consider your building when a suitable place is available. Placement is not guaranteed, and existing worlds are not rebuilt.
+
+**You do not need to export or create a mod for this.** A saved local prefab with suitable location choices is enough to make it available.
+
+### When should I use Export for game?
+
+Use **File > Export for game…** mainly to limit the building to selected biomes, such as Forest and Snow, or to prepare a mod folder to share. The export screen explains how to install the resulting pack.
+
+A **location** describes a kind of place, such as Outside settlements or Residential district. A **biome** describes the landscape, such as Forest or Snow. Biome choices alone do not make a building available. **Export includes a copy of your edits but does not save the working document — use Ctrl+S too.**
+
+Check **View > Ground Level** before a game trial. Use **Tools > Set Ground Level…** if the building meets the world terrain at the wrong height. Road-exit markers can request a wilderness approach; several markers give the generator a choice, not a promise of several roads.
+
+## What's new in 0.2.0 — Forge Edition
+
+**From viewing to creating.** Create and edit prefabs, use the block Library and Quick Blocks, adjust supported doors and lights, configure basic sleeper areas, choose world locations and create road connections. Save your work locally and check it in the game.
+
+This release also adds optional biome-aware mod-pack export, clearer installation instructions and a beginner's **Your first prefab** guide. It fixes affected window frame/glass materials, supported door geometry, saved-frame bounds and the half-block offset of chain-link rail previews.
+
+[Read the full 0.2.0 release notes](https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.0) · [Changelog](CHANGELOG.md)
+
+## See the preview
+
+*These screenshots are from **0.1.0 — Water Edition**. They show the viewing and presentation tools, not the new 0.2 editing interface.*
 
 ![SuperDummy 0.1.0 — Water Edition displaying a 7 Days to Die POI with presentation lighting and surrounding Scenic Terrain](assets/screenshots/0.1.0/superdummy-0.1.0-hero.png)
+
+<details>
+<summary>More screenshots</summary>
 
 <table>
   <tr>
@@ -39,58 +113,11 @@ Build a new POI, edit an existing one, configure supported doors, lights and sle
   </tr>
 </table>
 
+</details>
+
 *More views rendered by SuperDummy 0.1.0, including a blocks-hidden view and the sleeper statistics panel.*
 
----
-
-## What can you do with SuperDummy?
-
-- **Build a new prefab** — start empty or with flat ground, choose blocks and variants, and grow the workspace as you build.
-- **Edit individual objects** — Select, Move, Duplicate, Pick, Insert, Delete and rotate, with previews and Undo/Redo. Supported multiblock objects move together.
-- **Find your building parts** — use the block Library, Quick Blocks and separate visibility controls for Player and developer blocks.
-- **Set supported object states** — open or close non-powered doors, shutters, hatches and gates, set their locks, switch supported lamps and edit supported writable signs.
-- **Prepare gameplay and placement** — edit the supplied basic sleeper-volume/group tools, choose world locations, set ground level and author road-exit markers.
-- **Save and return to your work** — Save/Save As, saved-state feedback and prompts for unsaved changes.
-- **Inspect and present POIs** — browse game/local prefabs, fly through the scene, read POI and sleeper statistics, export TXT/CSV reports, use cinema orbit and save thumbnails.
-- **Optionally restrict biomes or share a pack** — Export for game creates a ready-to-copy mod folder. It is not required for the game to find a saved local prefab.
-
-SuperDummy is an editor and preview tool, not a game client. It does not simulate enemy AI, structural collapse, electrical networks or the full world generator.
-
-## What's new in 0.2.0 — Forge Edition
-
-**From viewing to creating.** Create and edit prefabs, use the block Library and Quick Blocks, adjust supported doors and lights, configure basic sleeper areas, choose world locations and create road connections. Save your work locally and check it in the game.
-
-This release also adds optional biome-aware mod-pack export, clearer installation instructions and a beginner's **Your first prefab** guide. It fixes affected window frame/glass materials, supported door geometry, saved-frame bounds and the half-block offset of chain-link rail previews.
-
-[Read the full 0.2.0 release notes](https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.0) · [Changelog](CHANGELOG.md)
-
-## Installation and first run
-
-1. Download **[SuperDummy 0.2.0 for Windows x64](https://github.com/xvgray/superdummy-releases/releases/download/v0.2.0/SuperDummy-0.2.0-forge-edition-windows-x64.zip)** and extract the **entire ZIP**.
-2. Keep the `assets` and `resources` folders beside `superdummy.exe`.
-3. Run `superdummy.exe`. SuperDummy tries to find your game installation; select the game folder if prompted.
-4. Choose **New Prefab…** to start building, or **Load POI…** to open an existing prefab.
-5. Open **Help > User guide > Your first prefab** for a complete beginner walkthrough. **Tab** switches between the pointer and camera control; **Ctrl+S** saves your work.
-
-The default local prefab folder is `%APPDATA%\7DaysToDie\LocalPrefabs`; you can choose another folder in the browser. Settings, logs and caches are stored in `%LOCALAPPDATA%\SuperDummy` (preferences in `settings.xml`).
-
-> **Download the named Windows ZIP, not GitHub's automatic “Source code” archives.** This repository contains public release documentation, not the application source.
-
-## Use your prefab in a new world — export is optional
-
-1. Open **Tools > Prefab Settings…**, choose a suitable location and press **OK**. For a first isolated house, **Outside settlements** is a simple choice.
-2. Press **Ctrl+S** and save in the game's **LocalPrefabs** folder, normally `%APPDATA%\7DaysToDie\LocalPrefabs`. Keep the `.tts`, `.blocks.nim` and `.xml` together.
-3. Restart the game and generate a **new** world. The generator can consider your building when a suitable place is available. Placement is not guaranteed, and existing worlds are not rebuilt.
-
-**You do not need to export or create a mod just to make a local prefab available.** Use **File > Export for game…** mainly to limit it to selected biomes, such as Forest and Snow, or to prepare a mod folder to share.
-
-A **location** describes a kind of place, such as Outside settlements or Residential district. A **biome** describes the landscape, such as Forest or Snow. Biome choices alone do not make a building available. **Export includes a copy of your edits but does not save the working document — use Ctrl+S too.**
-
-Check **View > Ground Level** before a game trial. Use **Tools > Set Ground Level…** if the building meets the world terrain at the wrong height. Road-exit markers can request a wilderness approach; several markers give the generator a choice, not a promise of several roads.
-
-## Requirements, compatibility and limitations
-
-**Requirements**
+## What you need
 
 - **Windows 10/11, 64-bit**, with a Vulkan-capable GPU and current drivers.
 - **8 GB RAM minimum; 16 GB recommended.**
@@ -98,12 +125,13 @@ Check **View > Ground Level** before a game trial. Use **Tools > Set Ground Leve
 
 **Development baseline and reported game checks: 7 Days to Die V 3.3.0 (b18).** The user checked the reported editing cases and generated POIs with corrected ground level and road connections. This is not exhaustive verification of every model, mod or placement rule. Detecting an installation alone does not prove compatibility.
 
-**Limitations**
+<details>
+<summary>Other limits worth knowing</summary>
+
 
 - Local prefabs are based on the base game's blocks. Blocks and assets added by mods are **not fully supported**; a mod-dependent prefab may render with missing parts.
 - SuperDummy does not simulate AI, structural collapse, electrical networks or actual spawn behaviour. Sleeper previews do not predict the exact enemies spawned.
 - Powered-device editing and the elevator test door profile are outside the non-powered door workflow.
-- Water editing, region/group building tools and crash recovery are not added in 0.2. Save regularly and keep copies of important work.
 - Some separate canvas-sign libraries have explicit save restrictions. Export does not generate distant `.mesh` / `.ins` files.
 - Modded world-placement rule order is not fully analysed; reported Forest/Snow placement is not exhaustive proof of exclusion from other biomes.
 - Water is a **visual approximation**, not a fluid simulation.
@@ -112,33 +140,23 @@ Check **View > Ground Level** before a game trial. Use **Tools > Set Ground Leve
 - Thumbnails are **280 × 210 JPEG** images and are available for **local prefabs** only.
 - Higher lamp shadow limits and tilt-shift can reduce the frame rate. The depth prepass option is experimental and requires a restart.
 
-## Feedback, bugs and ideas
+</details>
 
-Suggestions and bug reports are welcome through [GitHub Issues](https://github.com/xvgray/superdummy-releases/issues).
+## Need a hand?
 
-Please include:
+Start with **Help > User guide** in the program. To report a problem or suggest an improvement, use **[GitHub Issues](https://github.com/xvgray/superdummy-releases/issues)**.
 
-- the **name of the affected prefab or POI**,
-- your **SuperDummy version** and **7 Days to Die version**.
+Tell us which **SuperDummy version**, **game version** and **prefab** you were using, what you tried, and what happened. A screenshot helps. For crashes or display problems, include your Windows version, graphics card and the relevant part of `%LOCALAPPDATA%\SuperDummy\logs\lastrun.log`.
 
-For technical problems, also add:
+Please do not upload game assets. This is a hobby project still under active development; reports from different PCs and prefabs help improve it.
 
-- your **Windows version** and **graphics card**,
-- a **screenshot** and the relevant part of the application **log**.
+You can also find the project on **[Nexus Mods](https://www.nexusmods.com/7daystodie/mods/12367)**. Use the download button at the top of this page for the current GitHub release.
 
-Please **do not upload or attach game assets**.
-
-If SuperDummy saved you time, a ⭐ on the repository is a simple way to say thanks.
-
-## Project status
-
-The latest release is **0.2.0 — Forge Edition**, bringing prefab editing alongside the existing viewing and presentation tools. The project is **still under active development**. Reported manual checks cover particular workflows; they do not promise full compatibility with every game asset, mod or version.
-
-The source code is maintained in a separate private repository. This repository is the official home for public documentation, Windows downloads and release notes.
+The application source is kept in a separate private repository. This public page is for downloads, documentation and feedback.
 
 ## Support the project
 
-If SuperDummy is useful to you, you can support its development:
+If SuperDummy helps with your builds, a ⭐ on this repository or a shared screenshot is a welcome way to support it. You can also support development here:
 
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy_Me_a_Coffee-bullrider-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=000000)](https://buymeacoffee.com/bullrider)
 
@@ -156,6 +174,6 @@ SuperDummy is an independent, unofficial fan-made tool. It is not affiliated wit
 
 <div align="center">
 
-Made with Rust and Bevy
+Made with [Rust](https://rust-lang.org/) and [Bevy](https://bevy.org/)
 
 </div>

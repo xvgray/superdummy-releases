@@ -1,12 +1,23 @@
 <div align="center">
 
-<img src="assets/branding/superdummy-icon.png" alt="SuperDummy icon" width="180">
-
 # SuperDummy
 
 **0.2.0 — Forge Edition**
 
 *From viewing to creating.*
+
+<table>
+  <tr>
+    <td width="50%" align="center"><strong>Build in SuperDummy</strong></td>
+    <td width="50%" align="center"><strong>See it in 7 Days to Die</strong></td>
+  </tr>
+  <tr>
+    <td width="50%"><a href="assets/screenshots/0.2.0/superdummy-0.2.0-road-exit.png"><img src="assets/screenshots/0.2.0/superdummy-0.2.0-road-exit.png" alt="SuperDummy 0.2 editor with a small brick building and road-exit marker" width="100%"></a></td>
+    <td width="50%"><a href="assets/screenshots/0.2.0/superdummy-0.2.0-in-game.png"><img src="assets/screenshots/0.2.0/superdummy-0.2.0-in-game.png" alt="The user's brick prefab placed in a generated 7 Days to Die 3.3 b18 Burnt Forest world" width="100%"></a></td>
+  </tr>
+</table>
+
+*A small user-built prefab in the editor and in a generated game world. Click either image for the full-size view.*
 
 [![Total GitHub downloads](https://img.shields.io/github/downloads/xvgray/superdummy-releases/total?style=flat-square&label=downloads&color=2EA44F&logo=github)](https://github.com/xvgray/superdummy-releases/releases)
 [![Windows 10 and 11](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D4?style=flat-square&logo=windows&logoColor=white)](#what-you-need)
@@ -102,14 +113,29 @@ This release also adds optional biome-aware mod-pack export, clearer installatio
 
 [Read the full 0.2.0 release notes](https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.0) · [Changelog](CHANGELOG.md)
 
-## See the preview
+## A closer look at 0.2
+
+### Start with a simple workspace
+
+Choose a name, the starting ground size and whether to add a ground layer. You can grow the working area as you build.
+
+![SuperDummy 0.2 New prefab dialog with name, width, length and starting-ground choices](assets/screenshots/0.2.0/superdummy-0.2.0-new-prefab.png)
+
+<details>
+<summary>Built-in beginner guide</summary>
+
+The English guide explains the controls, saving and how to put your first building into a new game world.
+
+![SuperDummy 0.2 built-in user guide showing getting started and optional export instructions](assets/screenshots/0.2.0/superdummy-0.2.0-user-guide.png)
+
+</details>
+
+<details>
+<summary>Earlier viewing and presentation screenshots (0.1.0)</summary>
 
 *These screenshots are from **0.1.0 — Water Edition**. They show the viewing and presentation tools, not the new 0.2 editing interface.*
 
 ![SuperDummy 0.1.0 — Water Edition displaying a 7 Days to Die POI with presentation lighting and surrounding Scenic Terrain](assets/screenshots/0.1.0/superdummy-0.1.0-hero.png)
-
-<details>
-<summary>More screenshots</summary>
 
 <table>
   <tr>
@@ -122,9 +148,10 @@ This release also adds optional biome-aware mod-pack export, clearer installatio
   </tr>
 </table>
 
-</details>
 
 *More views rendered by SuperDummy 0.1.0, including a blocks-hidden view and the sleeper statistics panel.*
+
+</details>
 
 ## What you need
 

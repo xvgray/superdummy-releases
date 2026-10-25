@@ -2,11 +2,44 @@
 
 All notable changes to SuperDummy will be documented in this file.
 
-SuperDummy 0.1.0 — Water Edition is the first stable release. The project remains under active development, and features or behaviour may still change in future releases.
+The latest release is SuperDummy 0.2.0 — Forge Edition. The project remains under active development; reported checks do not imply full compatibility with every game asset or mod.
 
 ## [Unreleased]
 
 Nothing yet.
+
+## [0.2.0] - 2026-10-25
+
+**Forge Edition — From viewing to creating.**
+
+### Added
+
+- New prefab creation with empty or flat starting ground.
+- Individual-object editing, variants, Quick Blocks, previews and Undo/Redo.
+- Save/Save As, saved-state tracking and unsaved-work prompts.
+- Ground-level editing and working/saved-frame feedback.
+- Supported door/shutter/gate endpoint previews, Open/Closed and Lock editing.
+- Per-instance supported lamp state and writable sign/crate text editing.
+- Basic sleeper point/volume/group editing.
+- Plain-language world locations and Advanced Tags editing.
+- Road-exit authoring, handles, snapping and connection helpers.
+- Optional mod-pack export, selected-biome rules and reusable export settings.
+- Pack-folder discovery, installation instructions and missing-location guards.
+- A beginner's first-prefab guide, including the LocalPrefabs path without export.
+
+### Fixed
+
+- Frame/glass surface selection for affected ShapeNew windows.
+- Supported skinned door/frame geometry and shared endpoint transforms.
+- Stale road-marker bounds holding empty exported frame margins.
+- Chain-link rail ModelOffset inheritance exclusions and the half-block offset.
+- Prefab Settings overflow and inconsistent state controls.
+- Managed-pack file replacement and rollback handling in the reviewed paths.
+
+### Compatibility
+
+- Development baseline and reported game acceptance: 7 Days to Die 3.3.0 b18.
+- Detailed limits and the scope of manual checks are in RELEASE_NOTES.md.
 
 ## [0.1.0] - 2026-09-26
 
@@ -164,7 +197,8 @@ First stable release — **Water Edition**, following the three 0.1.0 previews.
 - Runtime logging
 - English user interface
 
-[Unreleased]: https://github.com/xvgray/superdummy-releases/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/xvgray/superdummy-releases/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.0
 [0.1.0]: https://github.com/xvgray/superdummy-releases/releases/tag/v0.1.0
 [0.1.0-pre.3]: https://github.com/xvgray/superdummy-releases/compare/v0.1.0-pre.2...v0.1.0-pre.3
 [0.1.0-pre.2]: https://github.com/xvgray/superdummy-releases/compare/v0.1.0-pre.1...v0.1.0-pre.2

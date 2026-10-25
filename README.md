@@ -21,7 +21,7 @@ A prefab, also called a POI, is a building or place the game can put in its worl
 
 [![Download for Windows](https://img.shields.io/badge/Download%20for%20Windows-0.2.0%20x64-2EA44F?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/xvgray/superdummy-releases/releases/download/v0.2.0/SuperDummy-0.2.0-forge-edition-windows-x64.zip)
 
-[Release notes](https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.0) · [First steps](#start-in-a-few-minutes) · [What can I make?](#what-you-can-do) · [Report an issue](https://github.com/xvgray/superdummy-releases/issues) · [Support development](https://buymeacoffee.com/bullrider)
+[Release notes](https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.0) · [First steps](#start-in-a-few-minutes) · [What can I make?](#what-you-can-do) · [Roadmap](ROADMAP.md) · [Report an issue](https://github.com/xvgray/superdummy-releases/issues) · [Support development](https://buymeacoffee.com/bullrider)
 
 **Windows 10/11, 64-bit · Requires your own 7 Days to Die installation · No game assets included**
 
@@ -166,6 +166,8 @@ The application source is kept in a separate private repository. This public pag
 ## What I'm working toward
 
 I'm continuing to develop SuperDummy toward the tools available in the game's own prefab editor — and additional features beyond them. Making building clearer, faster and more comfortable is just as important as adding missing features. Work continues on new tools, bug fixes and a friendlier everyday workflow; these are development goals, not features already available in 0.2.
+
+See the [roadmap](ROADMAP.md) for released features and the next planned steps.
 
 ## Support the project
 

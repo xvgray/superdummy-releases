@@ -43,6 +43,15 @@ A prefab, also called a POI, is a building or place the game can put in its worl
 
 SuperDummy reads blocks, models and textures from your own game installation. It does not modify the installed game files or include game assets in its download.
 
+## Current editing limits
+
+- **No block-painting tools yet.** Existing paint can be shown and kept by supported edits, but you cannot paint or repaint blocks in this version.
+- **Mod-added blocks are not loaded.** SuperDummy reads the base game's block definitions and assets, not blocks or assets supplied by mods. A prefab that needs them may have missing parts.
+- **Some game mechanisms are not supported yet**, including gas valves. Seeing an object's model does not mean its special behaviour can be configured or tried out in the editor.
+- **Very large prefabs may have problems loading or being edited.** They can take a long time to open, use a lot of memory or become slow to work with. Save often and keep separate copies of important projects.
+
+Water editing and emergency autosave/crash recovery are also unavailable, as noted above. Version 0.2 may still contain bugs; please keep that in mind when working on a large or important build.
+
 ## Start in a few minutes
 
 1. Download **[SuperDummy 0.2.0 for Windows x64](https://github.com/xvgray/superdummy-releases/releases/download/v0.2.0/SuperDummy-0.2.0-forge-edition-windows-x64.zip)** and extract the **entire ZIP**.
@@ -129,7 +138,7 @@ This release also adds optional biome-aware mod-pack export, clearer installatio
 <summary>Other limits worth knowing</summary>
 
 
-- Local prefabs are based on the base game's blocks. Blocks and assets added by mods are **not fully supported**; a mod-dependent prefab may render with missing parts.
+- Mod-added block definitions and assets are not loaded; local prefabs use the base game's blocks and assets.
 - SuperDummy does not simulate AI, structural collapse, electrical networks or actual spawn behaviour. Sleeper previews do not predict the exact enemies spawned.
 - Powered-device editing and the elevator test door profile are outside the non-powered door workflow.
 - Some separate canvas-sign libraries have explicit save restrictions. Export does not generate distant `.mesh` / `.ins` files.
@@ -153,6 +162,10 @@ Please do not upload game assets. This is a hobby project still under active dev
 You can also find the project on **[Nexus Mods](https://www.nexusmods.com/7daystodie/mods/12367)**. Use the download button at the top of this page for the current GitHub release.
 
 The application source is kept in a separate private repository. This public page is for downloads, documentation and feedback.
+
+## What I'm working toward
+
+I'm continuing to develop SuperDummy toward the tools available in the game's own prefab editor — and additional features beyond them. Making building clearer, faster and more comfortable is just as important as adding missing features. Work continues on new tools, bug fixes and a friendlier everyday workflow; these are development goals, not features already available in 0.2.
 
 ## Support the project
 

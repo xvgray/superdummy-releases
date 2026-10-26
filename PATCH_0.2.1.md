@@ -13,18 +13,23 @@ your download.
 | Step | What should improve | Current status |
 | --- | --- | --- |
 | 1. Saving without tags | Explain missing location tags before saving; offer location settings or an explicit choice to save a draft without tags. | Implemented locally. The user confirmed the clear warning; the remaining save/cancel flows still need review. Not published. |
-| 2a. Hide road exits fully | Turning the layer off also hides the last selection, circle, center and handles. Hidden helpers must not intercept clicks. | In progress, together with 2b. |
-| 2b. Hide sleeper volumes fully | Turning the layer off also hides the selected volume, without an extra click in the scene. | In progress, together with 2a. |
-| 3. Place blocks more easily | Make it easier to target the intended face and place the next block against it, with an accurate preview. | Reported; not started. |
+| 2a. Hide road exits fully | Turning the layer off also hides the last selection, circle, center and handles. Hidden helpers must not intercept clicks. | Implemented locally; the user confirmed the outlines disappear when switched off (26 October). Not published. |
+| 2b. Hide sleeper volumes fully | Turning the layer off also hides the selected volume, without an extra click in the scene. | Implemented locally; the user confirmed the selected outline disappears when switched off (26 October). Not published. |
+| 3. Place blocks more easily | Show the attachment face/plane, including on thin posts and panels; keep targeting, ghost and placement consistent. | In progress with the agent. No implementation report or acceptance yet. |
 | 4. Select visible objects reliably | Improve picking difficult objects, especially open door leaves outside their original footprint. | Reported; not started. |
 | 5. Show rotation direction | Display a clear arrow/arc for the actual rotation axis and direction, matching the preview and final result. | Planned; not started. |
 | 6. Consistent right-click and Esc | Use right-click for context menus. Esc cancels the active edit safely and returns to Select when leaving the tool. | Planned; not started. |
 | 7. Easier area handles | Make road-exit and sleeper-volume edges/handles easier to discover and drag; retain numeric fields for precise values. | Planned; not started. Existing road-exit Move/Resize tools will be refined. |
-| 8. Check height limits | Establish the game's real world/prefab height limits, show clear bounds and prevent edits outside the supported range. | Research required. No numeric limit has been assumed. |
+| 8. Check height limits | Establish the game's real world/prefab height limits, show clear bounds and prevent edits outside the supported range. | Source/data research completed for 3.3 b18. Editing restrictions and in-game boundary checks are not started; different mechanisms have different limits. |
 
-The two visibility problems are one implementation stage with two separate
-acceptance checks. Placement and selection may share technical causes, but
-both reported workflows must be checked.
+The user accepted the two original visibility symptoms: outlines disappear
+after switching off their layers. This does not yet confirm hidden-hit
+handling, cancelling an active drag, restoring drafts/selection, independent
+switches or thumbnail suppression. Those remain review items. All fixes are
+local and unreleased.
+
+Placement and selection may share technical causes, but both reported
+workflows must be checked separately.
 
 For height limits, we first need to distinguish the world ceiling, prefab file
 height and placement/ground offset. Any restrictions must follow the game data

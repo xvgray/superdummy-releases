@@ -70,13 +70,18 @@ reported while building with 0.2.0, one step at a time. See the
 - **Implemented locally:** warning and settings before saving without location
   tags. The user confirmed the clear message; the remaining save/cancel paths
   still need review. This fix is not yet in the published download.
-- **In progress:** fully hide road-exit helpers and the selected sleeper volume
-  when their respective visibility switches are off. Hidden helpers must not
-  intercept clicks.
-- **Next, in order:** easier placement against the intended block face; reliable
-  selection (including open doors); a rotation-direction guide; consistent
-  right-click context menus and Esc cancellation; easier draggable area edges;
-  researched world/prefab height limits and appropriate editing bounds.
+- **Implemented locally; original visibility bugs accepted by the user:**
+  road-exit outlines/helpers and the selected sleeper-volume outline disappear
+  when their layers are switched off (26 October). Hidden-hit handling,
+  drag cancellation, restoration and thumbnails still need separate checks.
+- **In progress:** easier placement against the intended block face, with a
+  visible attachment plane for thin shapes such as posts and panels. The agent
+  is working on it; implementation and acceptance are not yet reported.
+- **Next, in order:** reliable selection (including open doors); a
+  rotation-direction guide; consistent right-click context menus and Esc
+  cancellation; easier draggable area edges; height-bound validation.
+  Source/data research on height limits is documented locally; implementation
+  and in-game boundary checks are still pending.
 
 The numeric height limit is not assumed. Existing road-exit Move/Resize tools
 will be refined rather than listed as a missing feature. No 0.2.1 release date

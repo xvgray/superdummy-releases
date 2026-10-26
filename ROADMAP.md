@@ -75,10 +75,10 @@ reported while building with 0.2.0, one step at a time. See the
   These original symptoms were checked during development (26 October).
   Hidden-hit handling, drag cancellation, restoration and thumbnails still
   need separate checks.
-- **Implemented in development builds:** a fix for blank material-family
-  previews in the Block Library, especially Wood. Empty frames are no longer
-  kept as finished thumbnails. Compilation and release build are complete;
-  visual checks remain pending. Not yet in the published download.
+- **Fixed in development builds:** blank material-family previews in the
+  Block Library. The Wood cube preview has been checked and now appears
+  correctly instead of an empty dark tile (26 October). Other families and
+  category/prefab-switching checks remain pending. Not released.
 - **In progress:** easier placement against the intended block face, with a
   visible attachment plane for thin shapes such as posts and panels.
   Implementation and visual checks are not complete yet.

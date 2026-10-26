@@ -37,10 +37,10 @@ verified.
 - [x] Existing thumbnail capture/preservation, statistics and presentation tools.
 - [x] Updated beginner help, first-prefab walkthrough and known-limit notes.
 
-Reported game checks used **7 Days to Die V 3.3.0 (b18)**. The user confirmed
-the reported generated POI examples with corrected ground level and road
-approaches, and a selection of editing/rendering cases. This is not exhaustive
-acceptance of all features, game mechanisms or biome-rule combinations.
+Development checks used **7 Days to Die V 3.3.0 (b18)**. These covered generated
+POI examples with corrected ground level and road approaches, and a selection
+of editing/rendering cases. This is not exhaustive verification of all
+features, game mechanisms or biome-rule combinations.
 
 **Export is optional.** Save a prefab with suitable location choices into
 LocalPrefabs to make it available for a new world's generation. Export mainly
@@ -65,18 +65,19 @@ use or low frame rates. Performance and reliability remain ongoing work.
 
 **Planned / in progress, not released.** We are working through the problems
 reported while building with 0.2.0, one step at a time. See the
-**[0.2.1 checklist and progress](PATCH_0.2.1.md)** for acceptance and release checks.
+**[0.2.1 checklist and progress](PATCH_0.2.1.md)** for development and release checks.
 
-- **Implemented locally:** warning and settings before saving without location
-  tags. The user confirmed the clear message; the remaining save/cancel paths
-  still need review. This fix is not yet in the published download.
-- **Implemented locally; original visibility bugs accepted by the user:**
-  road-exit outlines/helpers and the selected sleeper-volume outline disappear
-  when their layers are switched off (26 October). Hidden-hit handling,
-  drag cancellation, restoration and thumbnails still need separate checks.
+- **Implemented in development builds:** warning and settings before saving
+  without location tags. The message has been checked; the remaining
+  save/cancel paths still need review. Not yet in the published download.
+- **Fixed in development builds:** road-exit outlines/helpers and the selected
+  sleeper-volume outline disappear when their layers are switched off.
+  These original symptoms were checked during development (26 October).
+  Hidden-hit handling, drag cancellation, restoration and thumbnails still
+  need separate checks.
 - **In progress:** easier placement against the intended block face, with a
-  visible attachment plane for thin shapes such as posts and panels. The agent
-  is working on it; implementation and acceptance are not yet reported.
+  visible attachment plane for thin shapes such as posts and panels.
+  Implementation and visual checks are not complete yet.
 - **Next, in order:** reliable selection (including open doors); a
   rotation-direction guide; consistent right-click context menus and Esc
   cancellation; easier draggable area edges; height-bound validation.

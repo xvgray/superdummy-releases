@@ -13,11 +13,11 @@
   </tr>
   <tr>
     <td width="50%"><a href="assets/screenshots/0.2.0/superdummy-0.2.0-road-exit.png"><img src="assets/screenshots/0.2.0/superdummy-0.2.0-road-exit.png" alt="SuperDummy 0.2 editor with a small brick building and road-exit marker" width="100%"></a></td>
-    <td width="50%"><a href="assets/screenshots/0.2.0/superdummy-0.2.0-in-game.png"><img src="assets/screenshots/0.2.0/superdummy-0.2.0-in-game.png" alt="The user's brick prefab placed in a generated 7 Days to Die 3.3 b18 Burnt Forest world" width="100%"></a></td>
+    <td width="50%"><a href="assets/screenshots/0.2.0/superdummy-0.2.0-in-game.png"><img src="assets/screenshots/0.2.0/superdummy-0.2.0-in-game.png" alt="A brick prefab placed in a generated 7 Days to Die 3.3 b18 Burnt Forest world" width="100%"></a></td>
   </tr>
 </table>
 
-*A small user-built prefab in the editor and in a generated game world. Click either image for the full-size view.*
+*A small example prefab in the editor and in a generated game world. Click either image for the full-size view.*
 
 [![Total GitHub downloads](https://img.shields.io/github/downloads/xvgray/superdummy-releases/total?style=flat-square&label=downloads&color=2EA44F&logo=github)](https://github.com/xvgray/superdummy-releases/releases)
 [![Windows 10 and 11](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D4?style=flat-square&logo=windows&logoColor=white)](#what-you-need)
@@ -159,7 +159,7 @@ The English guide explains the controls, saving and how to put your first buildi
 - **8 GB RAM minimum; 16 GB recommended.**
 - Your own, compatible installation of **7 Days to Die**. Game files and assets are not included.
 
-**Development baseline and reported game checks: 7 Days to Die V 3.3.0 (b18).** The user checked the reported editing cases and generated POIs with corrected ground level and road connections. This is not exhaustive verification of every model, mod or placement rule. Detecting an installation alone does not prove compatibility.
+**Development baseline and reported game checks: 7 Days to Die V 3.3.0 (b18).** Development checks covered the reported editing cases and generated POIs with corrected ground level and road connections. This is not exhaustive verification of every model, mod or placement rule. Detecting an installation alone does not prove compatibility.
 
 <details>
 <summary>Other limits worth knowing</summary>

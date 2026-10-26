@@ -63,7 +63,7 @@ use or low frame rates. Performance and reliability remain ongoing work.
 
 ## Next patch — 0.2.1: editing fixes and usability
 
-**Planned / in progress, not released.** We are working through the problems
+**Planned / in progress, not released.** I'm working through the problems
 reported while building with 0.2.0, one step at a time. See the
 **[0.2.1 checklist and progress](PATCH_0.2.1.md)** for development and release checks.
 
@@ -86,10 +86,19 @@ reported while building with 0.2.0, one step at a time. See the
   check of the reported wall-interception case looks correct on the model tried
   (26 October). Other door models, rotations and workflow checks remain pending.
   Not released.
-- **Next, in order:** a rotation-direction guide; consistent right-click context menus and Esc
-  cancellation; easier draggable area edges; height-bound validation.
-  Source/data research on height limits is documented locally; implementation
-  and in-game boundary checks are still pending.
+- **Implemented and checked in development builds:** an amber rotation guide
+  showing the actual axis and both wheel directions, with clearer arrows and
+  separated labels. Not released.
+- **Implemented and checked in development builds:** Esc cancels the current
+  tool and returns to Select; right-click no longer cancels block tools.
+  Existing context menus remain available; a new block context menu is not
+  included in this change. Not released.
+- **Implemented and checked in development builds:** a quiet, optional support
+  card on the Welcome screen and clearer support information.
+- **Next, in order:** clearer draggable road-exit and sleeper-volume handles,
+  followed by height-bound validation. The handle-editing stage is specified,
+  but not implemented yet. Source/data research on height limits is documented
+  locally; implementation and in-game boundary checks are still pending.
 
 The numeric height limit is not assumed. Existing road-exit Move/Resize tools
 will be refined rather than listed as a missing feature. No 0.2.1 release date
@@ -118,6 +127,20 @@ They are not included in 0.2.0 or promised as part of this patch.
 These are planned packages, not promises that every idea will ship together.
 Features delivered early, such as signs, doors, road exits and basic export,
 are already listed under 0.2 rather than being advertised as future work.
+
+### Terrain sculpt — an early design for a later release
+
+![Terrain sculpt concept inside the existing SuperDummy toolbar and Inspector](assets/screenshots/terrain-sculpt-concept-02.png)
+
+**Design mockup — this tool is not implemented or included in 0.2.1.**
+The proposed Terrain tab keeps the existing Inspector and adds Raise, Lower,
+Smooth and Flatten brushes, with size, strength and a soft edge. The brush
+would shape the ground directly in the scene, with one Undo per stroke.
+
+The aim is to make slopes, paths and valleys easier to build. It must work
+within the game's terrain resolution and preserve saved terrain data, rather
+than only changing how the preview looks. Terrain sculpt remains a **0.5
+target**, with no release date; the design and scope can change.
 
 ## Other follow-ups — no fixed release number
 

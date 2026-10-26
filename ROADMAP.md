@@ -82,8 +82,10 @@ reported while building with 0.2.0, one step at a time. See the
 - **Fixed in development builds:** easier block placement and picking of thin
   and rotated shapes. The reported placement and selection cases have been
   checked (26 October); remaining workflow checks are still pending. Not released.
-- **Picking follow-up:** open doors can still intercept the cursor over a
-  neighbouring wall. This case remains open before moving on to rotation guides.
+- **Implemented in development builds:** precise open-door picking. The initial
+  check of the reported wall-interception case looks correct on the model tried
+  (26 October). Other door models, rotations and workflow checks remain pending.
+  Not released.
 - **Next, in order:** a rotation-direction guide; consistent right-click context menus and Esc
   cancellation; easier draggable area edges; height-bound validation.
   Source/data research on height limits is documented locally; implementation

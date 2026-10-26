@@ -79,11 +79,12 @@ reported while building with 0.2.0, one step at a time. See the
   Block Library. The Wood cube preview has been checked and now appears
   correctly instead of an empty dark tile (26 October). Other families and
   category/prefab-switching checks remain pending. Not released.
-- **In progress:** easier placement against the intended block face, with a
-  visible attachment plane for thin shapes such as posts and panels.
-  Implementation and visual checks are not complete yet.
-- **Next, in order:** reliable selection (including open doors); a
-  rotation-direction guide; consistent right-click context menus and Esc
+- **Fixed in development builds:** easier block placement and picking of thin
+  and rotated shapes. The reported placement and selection cases have been
+  checked (26 October); remaining workflow checks are still pending. Not released.
+- **Picking follow-up:** open doors can still intercept the cursor over a
+  neighbouring wall. This case remains open before moving on to rotation guides.
+- **Next, in order:** a rotation-direction guide; consistent right-click context menus and Esc
   cancellation; easier draggable area edges; height-bound validation.
   Source/data research on height limits is documented locally; implementation
   and in-game boundary checks are still pending.

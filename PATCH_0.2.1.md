@@ -21,7 +21,7 @@ your download.
 | 6. Consistent right-click and Esc | Use right-click for context menus. Esc cancels the active edit safely and returns to Select when leaving the tool. | Planned; not started. |
 | 7. Easier area handles | Make road-exit and sleeper-volume edges/handles easier to discover and drag; retain numeric fields for precise values. | Planned; not started. Existing road-exit Move/Resize tools will be refined. |
 | 8. Check height limits | Establish the game's real world/prefab height limits, show clear bounds and prevent edits outside the supported range. | Source/data research completed for 3.3 b18. Editing restrictions and in-game boundary checks are not started; different mechanisms have different limits. |
-| 9. Blank library previews | Prevent an empty frame from being kept as a finished material-family thumbnail, especially Wood; avoid duplicate preview requests. | Implemented in development builds; compilation and release build completed. Visual checks after a fresh start and when changing categories/prefabs remain pending. Not released. |
+| 9. Blank library previews | Prevent an empty frame from being kept as a finished material-family thumbnail, especially Wood; avoid duplicate preview requests. | Fixed in development builds. Checked that the Wood cube preview appears correctly instead of an empty dark tile (26 October). Other families and category/prefab-switching checks remain pending. Not released. |
 
 The two original visibility symptoms have been checked during development:
 outlines disappear after switching off their layers. This does not yet confirm hidden-hit

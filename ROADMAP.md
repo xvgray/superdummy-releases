@@ -1,6 +1,6 @@
 # SuperDummy roadmap
 
-Updated **25 October 2026**. Latest release:
+Updated **26 October 2026**. Latest release:
 **[0.2.0 — Forge Edition](https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.0)**.
 
 The aim is to bring the tools available in the game's prefab editor to
@@ -61,18 +61,34 @@ working document. The game still decides whether a building is placed.
 Very large prefabs may have loading or editing problems, long waits, high memory
 use or low frame rates. Performance and reliability remain ongoing work.
 
-## Next priority — 0.2.1: recover your work
+## Next patch — 0.2.1: editing fixes and usability
 
-Planned, **not included in 0.2**:
+**Planned / in progress, not released.** We are working through the problems
+reported while building with 0.2.0, one step at a time. See the
+**[0.2.1 checklist and progress](PATCH_0.2.1.md)** for acceptance and release checks.
 
-- [ ] A versioned recovery copy of an edited session.
-- [ ] Background recovery saving and a clear choice to recover work on the next
-      start, without silently overwriting the original prefab.
-- [ ] Limits on storage/memory cost and checks with larger documents.
-- [ ] Fix confirmed save/editing regressions as they are reported.
+- **Implemented locally:** warning and settings before saving without location
+  tags. The user confirmed the clear message; the remaining save/cancel paths
+  still need review. This fix is not yet in the published download.
+- **In progress:** fully hide road-exit helpers and the selected sleeper volume
+  when their respective visibility switches are off. Hidden helpers must not
+  intercept clicks.
+- **Next, in order:** easier placement against the intended block face; reliable
+  selection (including open doors); a rotation-direction guide; consistent
+  right-click context menus and Esc cancellation; easier draggable area edges;
+  researched world/prefab height limits and appropriate editing bounds.
 
-This concerns recovering a working session, not replacing normal Ctrl+S or
-automatically writing changes into a game installation.
+The numeric height limit is not assumed. Existing road-exit Move/Resize tools
+will be refined rather than listed as a missing feature. No 0.2.1 release date
+or publication is claimed.
+
+### Recovery remains planned
+
+The earlier plan assigned recovery to 0.2.1. The immediate 0.2.1 scope is now
+the focused patch above. Versioned session recovery, background recovery
+saving with an explicit restore choice, and bounded storage/memory costs
+remain planned for a later reliability update, **without an assigned version**.
+They are not included in 0.2.0 or promised as part of this patch.
 
 ## Later release targets
 

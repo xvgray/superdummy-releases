@@ -83,7 +83,7 @@ The earlier plan assigned recovery to 0.2.1. The immediate 0.2.1 scope is now
 the focused patch above. Versioned session recovery, background recovery
 saving with an explicit restore choice, and bounded storage/memory costs
 remain planned for a later reliability update, **without an assigned version**.
-They are not included in 0.2.0 or promised as part of this patch.
+They are not included in 0.2.1.
 
 ## Later release targets
 

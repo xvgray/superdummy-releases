@@ -8,7 +8,7 @@ The latest release is SuperDummy 0.2.1 — Forge Edition. The project remains un
 
 Nothing yet.
 
-## [0.2.1]
+## [0.2.1] - 2026-10-27
 
 **Forge Edition — editing fixes and usability.**
 

@@ -1,6 +1,6 @@
 # SuperDummy roadmap
 
-Updated **26 October 2026**. Latest release:
+Updated **27 October 2026**. Latest release:
 **[0.2.0 — Forge Edition](https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.0)**.
 
 The aim is to bring the tools available in the game's prefab editor to
@@ -61,48 +61,34 @@ working document. The game still decides whether a building is placed.
 Very large prefabs may have loading or editing problems, long waits, high memory
 use or low frame rates. Performance and reliability remain ongoing work.
 
-## Next patch — 0.2.1: editing fixes and usability
+## Next patch — 0.2.1: scope closed
 
-**Planned / in progress, not released.** I'm working through the problems
-reported while building with 0.2.0, one step at a time. See the
-**[0.2.1 checklist and progress](PATCH_0.2.1.md)** for development and release checks.
+**Scope closed; final work in progress. Not released.**
+The public download remains 0.2.0. The agreed fixes have been checked during
+development; configurable Undo limits are the last implementation still in
+progress. The [0.2.1 checklist](PATCH_0.2.1.md) separates completed fixes from
+remaining work and release preparation.
 
-- **Implemented in development builds:** warning and settings before saving
-  without location tags. The message has been checked; the remaining
-  save/cancel paths still need review. Not yet in the published download.
-- **Fixed in development builds:** road-exit outlines/helpers and the selected
-  sleeper-volume outline disappear when their layers are switched off.
-  These original symptoms were checked during development (26 October).
-  Hidden-hit handling, drag cancellation, restoration and thumbnails still
-  need separate checks.
-- **Fixed in development builds:** blank material-family previews in the
-  Block Library. The Wood cube preview has been checked and now appears
-  correctly instead of an empty dark tile (26 October). Other families and
-  category/prefab-switching checks remain pending. Not released.
-- **Fixed in development builds:** easier block placement and picking of thin
-  and rotated shapes. The reported placement and selection cases have been
-  checked (26 October); remaining workflow checks are still pending. Not released.
-- **Implemented in development builds:** precise open-door picking. The initial
-  check of the reported wall-interception case looks correct on the model tried
-  (26 October). Other door models, rotations and workflow checks remain pending.
-  Not released.
-- **Implemented and checked in development builds:** an amber rotation guide
-  showing the actual axis and both wheel directions, with clearer arrows and
-  separated labels. Not released.
-- **Implemented and checked in development builds:** Esc cancels the current
-  tool and returns to Select; right-click no longer cancels block tools.
-  Existing context menus remain available; a new block context menu is not
-  included in this change. Not released.
-- **Implemented and checked in development builds:** a quiet, optional support
-  card on the Welcome screen and clearer support information.
-- **Next, in order:** clearer draggable road-exit and sleeper-volume handles,
-  followed by height-bound validation. The handle-editing stage is specified,
-  but not implemented yet. Source/data research on height limits is documented
-  locally; implementation and in-game boundary checks are still pending.
+Completed in development builds:
+- A clear missing-location-tag reminder before saving.
+- Road-exit and sleeper-volume helpers disappear when their layers are hidden.
+- Easier block attachment, thin/rotated-shape picking and open-door targeting.
+- A clear amber rotation guide showing wheel direction and the actual axis.
+- Consistent Esc cancellation back to Select; right-click opens context menus.
+- Independent road-exit and sleeper-volume editing, clearer handles and panels,
+  plus right-click → Edit on their outlines and labels.
+- A prefab-height compatibility profile and an Inspector that stays hidden on
+  the Welcome screen without an open document.
+- Corrected blank library previews and clearer optional development support.
 
-The numeric height limit is not assumed. Existing road-exit Move/Resize tools
-will be refined rather than listed as a missing feature. No 0.2.1 release date
-or publication is claimed.
+The agreed final additions are configurable Undo steps/memory limits and a
+separate Undo/Redo group above the Inspector. Undo limits are **in progress**;
+the control relocation is **implemented, awaiting a successful combined build
+and visual check**. No further feature work is being added to this patch.
+
+These checks cover the reported editing cases. They do not claim exhaustive
+compatibility with every model or completed height-boundary trials in the game.
+Publication follows the final history/save checks, build and package review.
 
 ### Recovery remains planned
 

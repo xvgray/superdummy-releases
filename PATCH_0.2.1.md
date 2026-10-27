@@ -1,66 +1,64 @@
 # SuperDummy 0.2.1 — editing fixes and usability
 
-Updated **26 October 2026**. **Planned / in progress — not released.**
-The current public download is still **[0.2.0 — Forge Edition](https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.0)**.
+Updated **27 October 2026**. **Scope closed; final implementation in progress.**
+**Not released:** the public download is still
+[0.2.0 — Forge Edition](https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.0).
 
-This patch is based on problems found while building with 0.2.0. I'm working
-through them one step at a time, checking each change during development. The list
-below records progress, not a promise that an unfinished fix is already in
-your download.
+The scope of this small patch is now fixed. The reported fixes below have
+been checked during development. Configurable Undo limits are the last
+implementation in progress; their completion is not assumed in advance.
 
-## The checklist, in working order
+## Completed in development builds
 
-| Step | What should improve | Current status |
-| --- | --- | --- |
-| 1. Saving without tags | Explain missing location tags before saving; offer location settings or an explicit choice to save a draft without tags. | Implemented in development builds. The warning has been checked; remaining save/cancel flows still need review. Not released. |
-| 2a. Hide road exits fully | Turning the layer off also hides the last selection, circle, center and handles. Hidden helpers must not intercept clicks. | Fixed in development builds. Checked that the outlines disappear when switched off (26 October). Not released. |
-| 2b. Hide sleeper volumes fully | Turning the layer off also hides the selected volume, without an extra click in the scene. | Fixed in development builds. Checked that the selected outline disappears when switched off (26 October). Not released. |
-| 3. Place blocks more easily | Show the attachment face/plane, including on thin posts and panels; keep targeting, ghost and placement consistent. | Implemented in development builds; placement checked in the reported cases (26 October). Remaining workflow checks are still pending. Not released. |
-| 4. Select visible objects reliably | Improve picking thin and rotated shapes across selection tools. | Implemented in development builds; picking checked in the reported cases (26 October). Open-door handling still needs the follow-up below. Not released. |
-| 4b. Open doors and nearby blocks | Opening a door must not make it intercept the cursor over a neighbouring wall; the visible leaf must still select its door. | Implemented in development builds. The initial check of the reported case looks correct on the door model tried (26 October). Other models, rotations and remaining workflow checks are pending. Not released. |
-| 5. Show rotation direction | Display a clear arrow/arc for the actual rotation axis and direction, matching the preview and final result. | Implemented in development builds. Appearance and usability checked after arrow/label layout and amber contrast improvements (26 October). Broader rotation-class checks remain pending. Not released. |
-| 6. Consistent right-click and Esc | Esc cancels the active edit and returns to Select; right-click is reserved for context menus. | Implemented and checked during development (26 October). Tool cancellation works as intended; existing menus remain. New block context menus are outside this stage. Not released. |
-| 7. Easier area handles | Clear, easy-to-grab handles for road exits and sleeper volumes, including height and previews before confirmation; numeric fields remain available. | Next stage specified; implementation not started. Refine existing road-exit Move/Resize and add consistent sleeper handles. |
-| 8. Check height limits | Establish the game's real world/prefab height limits, show clear bounds and prevent edits outside the supported range. | Source/data research completed for 3.3 b18. Editing restrictions and in-game boundary checks are not started; different mechanisms have different limits. |
-| 9. Blank library previews | Prevent an empty frame from being kept as a finished material-family thumbnail, especially Wood; avoid duplicate preview requests. | Fixed in development builds. Checked that the Wood cube preview appears correctly instead of an empty dark tile (26 October). Other families and category/prefab-switching checks remain pending. Not released. |
-| 10. Optional development support | Make the Welcome support card and existing support information easier to find, without automatic prompts. | Implemented in development builds; appearance and basic use checked (26 October). Not released. |
+- [x] Explain missing location tags before saving.
+- [x] Fully hide road-exit outlines and helpers when the layer is switched off.
+- [x] Hide the last selected sleeper-volume outline with its layer.
+- [x] Make attachment to blocks predictable, including thin posts and panels.
+- [x] Correct picking of thin/rotated shapes and open doors near other blocks.
+- [x] Show a readable amber rotation guide for the actual axis and wheel direction.
+- [x] Make Esc cancel the active tool and return to Select; reserve right-click
+  for context menus.
+- [x] Make road-exit and sleeper-volume editing independent of block Edit mode,
+  with clearer handles, focused panels and right-click → Edit.
+- [x] Add a 254-layer prefab-editor compatibility profile while preserving
+  oversized imports; keep world placement/ground offset distinct.
+- [x] Keep the Inspector hidden on Welcome when no document is open.
+- [x] Fix blank material-family thumbnails, including the Wood cube.
+- [x] Make optional development support easier to find without automatic prompts.
 
-The two original visibility symptoms have been checked during development:
-outlines disappear after switching off their layers. This does not yet confirm hidden-hit
-handling, cancelling an active drag, restoring drafts/selection, independent
-switches or thumbnail suppression. Those remain review items. All fixes are
-local and unreleased.
+These are development fixes, not features already in the published download.
+Checked means the reported editing scope was checked; it does not claim every
+model or game scenario was tried. In-game height-boundary trials and broader
+compatibility/performance work remain separate.
 
-Placement and selection may share technical causes, but both reported
-workflows must be checked separately.
+## Final work within the closed scope
 
-For height limits, we first need to distinguish the world ceiling, prefab file
-height and placement/ground offset. Any restrictions must follow the game data
-and code, preserve imported content and explain why an operation is refused.
+- [ ] **Configurable Undo history — in progress.** Settings will limit the
+  retained steps and memory shared by Undo/Redo. Older edits must remain in
+  saved prefabs even when their undo steps expire.
+- [ ] **Separate history controls — implemented, pending integration checks.**
+  Undo/Redo have been moved above the Inspector, with a right-edge fallback
+  when it is closed. The combined check/build is waiting for the ongoing
+  history implementation; appearance has not yet been checked.
 
-## Before publishing 0.2.1
+## Release preparation
 
-- [ ] Finish the listed fixes and development checks, or clearly state which items
-  move to a later release.
-- [ ] Check save/reload, Undo/Redo and cancellation for the changed workflows.
-- [ ] Complete the final compilation/release build after the last code change.
-- [ ] Update the user guide, version and changelog for the actual delivered scope.
-- [ ] Review the source changes, prepare the release package and verify public
-  downloads when publication is requested.
+- [ ] Verify save/reload, Undo/Redo/Revert all and cancellation after history changes.
+- [ ] Complete a successful final compilation and release build.
+- [ ] Update the version, changelog and guide for the delivered scope.
+- [ ] Review the changes, prepare the package and publish the verified downloads.
 
-There is no release date yet. Compiling a fix does not prove that its controls
-or appearance work correctly. The current progress does not mean a 0.2.1
-release or source push has already happened.
+There is no release date yet. Closing the scope does not mean a 0.2.1 release,
+source push or download update has already happened.
 
-## What happens to recovery?
+## Recovery and later features
 
-The earlier roadmap assigned session recovery to 0.2.1. The immediate priority
-has now changed to this focused patch. **Recovery remains planned for a later
-reliability update; its release number is not assigned yet.** It is not being
-silently dropped or claimed as part of this patch. The current application
-still has no emergency autosave or crash recovery: save often and keep copies.
+Emergency autosave/crash recovery remains planned for a later reliability
+update with no assigned version. It is not included in this patch.
+**Save often and keep copies of important work.**
 
-Painting, water editing, mod-added block loading and other major extensions
-are outside this patch. The later roadmap targets remain unchanged.
+Painting, water editing, mod-added block loading and terrain sculpt remain
+outside 0.2.1. The [terrain sculpt illustration](ROADMAP.md#terrain-sculpt--an-early-design-for-a-later-release)
+is an early design for a later release.
 
 [Full roadmap](ROADMAP.md) · [Discuss priorities](https://github.com/xvgray/superdummy-releases/issues/2) · [Report a bug](https://github.com/xvgray/superdummy-releases/issues/new/choose)

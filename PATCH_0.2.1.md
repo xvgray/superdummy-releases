@@ -1,6 +1,6 @@
 # SuperDummy 0.2.1 — editing fixes and usability
 
-Updated **27 October 2026**. **Implementation and package verification complete; publication pending.**
+Updated **27 October 2026**. **Published: [0.2.1 — Forge Edition](https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.1).**
 
 The scope of this focused patch is closed. The reported editing fixes were checked during development; this does not mean every model, input path or game scenario was tested.
 
@@ -29,8 +29,7 @@ The scope of this focused patch is closed. The reported editing fixes were check
 - [x] Archive integrity and all 44 entries in its internal `SHA256SUMS.txt` were verified.
 - [x] ZIP size and SHA-256 match the supplied checksum file.
 - [x] Public release notes, changelog and homepage update are prepared, preserving the existing page layout, screenshots and badges.
-- [ ] Upload both release assets, verify the uploaded ZIP and publish v0.2.1 as Latest.
-- [ ] Merge the documentation after the download is available.
+- [x] Upload both release assets, verify their SHA-256 digests on GitHub and publish v0.2.1 as Latest. The public release page and ZIP link return HTTP 200.
 
 Package: `SuperDummy-0.2.1-forge-edition-windows-x64.zip` — **40,559,522 bytes**.  
 SHA-256: `b7010c546564f30ecb324cda637c1b358c567059d29fea23f78db0ca2cea941b`.

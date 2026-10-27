@@ -2,11 +2,44 @@
 
 All notable changes to SuperDummy will be documented in this file.
 
-The latest release is SuperDummy 0.2.0 — Forge Edition. The project remains under active development; reported checks do not imply full compatibility with every game asset or mod.
+The latest release is SuperDummy 0.2.1 — Forge Edition. The project remains under active development; reported checks do not imply full compatibility with every game asset or mod.
 
 ## [Unreleased]
 
 Nothing yet.
+
+## [0.2.1] - 2026-10-27
+
+**Forge Edition — editing fixes and usability.**
+
+### Added
+
+- Configurable shared Undo/Redo step and memory budgets (100 steps / 256 MB by default).
+- Compact history usage on the status bar, detailed tooltips and Undo/Redo in Tools.
+- A 254-layer prefab-editor compatibility profile while retaining oversized imports.
+
+### Changed
+
+- Clearer block-attachment preview and amber rotation guide.
+- Consistent Esc cancellation back to Select and right-click context menus.
+- Independent road-exit and sleeper-volume editing with clearer handles and panels.
+- A clear missing-location reminder before saving.
+- Optional development support made easier to find, without automatic prompts.
+- Updated built-in help.
+
+### Fixed
+
+- Picking thin/rotated shapes and open doors near other blocks.
+- Road-exit helpers and the last selected sleeper-volume outline remaining visible after hiding their layers.
+- Blank material-family thumbnails, including Wood.
+- Inspector visibility on Welcome without an open document.
+
+### History behaviour and limits
+
+- Expired undo steps retain their effects in saved prefabs.
+- Revert all after trimming restores the session starting state and clears Undo/Redo.
+- The history memory budget is not a cap on total application RAM.
+- Emergency autosave/crash recovery, painting, water editing and mod-added blocks are not included.
 
 ## [0.2.0] - 2026-10-25
 
@@ -197,7 +230,8 @@ First stable release — **Water Edition**, following the three 0.1.0 previews.
 - Runtime logging
 - English user interface
 
-[Unreleased]: https://github.com/xvgray/superdummy-releases/compare/v0.2.0...HEAD
+[Unreleased]: https://github.com/xvgray/superdummy-releases/compare/v0.2.1...HEAD
+[0.2.1]: https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.1
 [0.2.0]: https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.0
 [0.1.0]: https://github.com/xvgray/superdummy-releases/releases/tag/v0.1.0
 [0.1.0-pre.3]: https://github.com/xvgray/superdummy-releases/compare/v0.1.0-pre.2...v0.1.0-pre.3

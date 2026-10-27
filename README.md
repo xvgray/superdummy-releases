@@ -2,7 +2,7 @@
 
 # SuperDummy
 
-**0.2.0 — Forge Edition**
+**0.2.1 — Forge Edition**
 
 *From viewing to creating.*
 
@@ -30,9 +30,9 @@
 
 A prefab, also called a POI, is a building or place the game can put in its world. SuperDummy lets you work on one without opening a game world — no coding or Unity installation needed.
 
-[![Download for Windows](https://img.shields.io/badge/Download%20for%20Windows-0.2.0%20x64-2EA44F?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/xvgray/superdummy-releases/releases/download/v0.2.0/SuperDummy-0.2.0-forge-edition-windows-x64.zip)
+[![Download for Windows](https://img.shields.io/badge/Download%20for%20Windows-0.2.1%20x64-2EA44F?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/xvgray/superdummy-releases/releases/download/v0.2.1/SuperDummy-0.2.1-forge-edition-windows-x64.zip)
 
-[Release notes](https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.0) · [First steps](#start-in-a-few-minutes) · [What can I make?](#what-you-can-do) · [Roadmap](ROADMAP.md) · [Report an issue](https://github.com/xvgray/superdummy-releases/issues) · [Support development](https://buymeacoffee.com/bullrider)
+[Release notes](https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.1) · [First steps](#start-in-a-few-minutes) · [What can I make?](#what-you-can-do) · [Roadmap](ROADMAP.md) · [Report an issue](https://github.com/xvgray/superdummy-releases/issues) · [Support development](https://buymeacoffee.com/bullrider)
 
 **Windows 10/11, 64-bit · Requires your own 7 Days to Die installation · No game assets included**
 
@@ -65,7 +65,7 @@ Water editing and emergency autosave/crash recovery are also unavailable, as not
 
 ## Start in a few minutes
 
-1. Download **[SuperDummy 0.2.0 for Windows x64](https://github.com/xvgray/superdummy-releases/releases/download/v0.2.0/SuperDummy-0.2.0-forge-edition-windows-x64.zip)** and extract the **entire ZIP**.
+1. Download **[SuperDummy 0.2.1 for Windows x64](https://github.com/xvgray/superdummy-releases/releases/download/v0.2.1/SuperDummy-0.2.1-forge-edition-windows-x64.zip)** and extract the **entire ZIP**.
 2. Keep the **assets** and **resources** folders beside **superdummy.exe**. There is no installer, and you do not need to install Rust or Bevy.
 3. Run `superdummy.exe`. SuperDummy tries to find your game installation; select the game folder if prompted.
 4. Choose **New Prefab…** to start building, or **Load POI…** to open an existing prefab.
@@ -105,13 +105,19 @@ A **location** describes a kind of place, such as Outside settlements or Residen
 
 Check **View > Ground Level** before a game trial. Use **Tools > Set Ground Level…** if the building meets the world terrain at the wrong height. Road-exit markers can request a wilderness approach; several markers give the generator a choice, not a promise of several roads.
 
-## What's new in 0.2.0 — Forge Edition
+## What's new in 0.2.1 — Forge Edition
 
-**From viewing to creating.** Create and edit prefabs, use the block Library and Quick Blocks, adjust supported doors and lights, configure basic sleeper areas, choose world locations and create road connections. Save your work locally and check it in the game.
+A focused update to make everyday prefab editing more comfortable.
 
-This release also adds optional biome-aware mod-pack export, clearer installation instructions and a beginner's **Your first prefab** guide. It fixes affected window frame/glass materials, supported door geometry, saved-frame bounds and the half-block offset of chain-link rail previews.
+- **More predictable building:** improved attachment previews, selection of thin and rotated shapes, and targeting of open doors.
+- **Clearer rotation and controls:** an amber rotation guide, consistent Esc cancellation and right-click context menus.
+- **Better road-exit and sleeper-volume editing:** independent editing sessions, clearer handles and panels, and helpers that disappear when their layers are hidden.
+- **Configurable Undo history:** step and memory limits in Settings > General, with compact Undo/Redo counters on the status bar and commands in Tools.
+- **Small workflow fixes:** a missing-location reminder before saving, corrected blank Library thumbnails and an Inspector that stays hidden when no prefab is open.
 
-[Read the full 0.2.0 release notes](https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.0) · [Changelog](CHANGELOG.md)
+Undo and Redo share one history budget. Older edits stay in the prefab when their undo steps expire. The memory setting limits retained operations, not the application's total RAM use.
+
+[Read the full 0.2.1 release notes](https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.1) · [Changelog](CHANGELOG.md)
 
 ## A closer look at 0.2
 

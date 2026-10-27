@@ -1,7 +1,7 @@
 # SuperDummy roadmap
 
 Updated **27 October 2026**. Latest release:
-**[0.2.0 — Forge Edition](https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.0)**.
+**[0.2.1 — Forge Edition](https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.1)**.
 
 The aim is to bring the tools available in the game's prefab editor to
 SuperDummy, then add tools that make building easier and faster. Work continues
@@ -61,34 +61,21 @@ working document. The game still decides whether a building is placed.
 Very large prefabs may have loading or editing problems, long waits, high memory
 use or low frame rates. Performance and reliability remain ongoing work.
 
-## Next patch — 0.2.1: scope closed
+## 0.2.1 — editing fixes and usability
 
-**Scope closed; final work in progress. Not released.**
-The public download remains 0.2.0. The agreed fixes have been checked during
-development; configurable Undo limits are the last implementation still in
-progress. The [0.2.1 checklist](PATCH_0.2.1.md) separates completed fixes from
-remaining work and release preparation.
+This focused patch improves everyday prefab editing:
 
-Completed in development builds:
-- A clear missing-location-tag reminder before saving.
-- Road-exit and sleeper-volume helpers disappear when their layers are hidden.
-- Easier block attachment, thin/rotated-shape picking and open-door targeting.
-- A clear amber rotation guide showing wheel direction and the actual axis.
-- Consistent Esc cancellation back to Select; right-click opens context menus.
-- Independent road-exit and sleeper-volume editing, clearer handles and panels,
-  plus right-click → Edit on their outlines and labels.
-- A prefab-height compatibility profile and an Inspector that stays hidden on
-  the Welcome screen without an open document.
-- Corrected blank library previews and clearer optional development support.
+- **More predictable building:** improved attachment previews, selection of thin and rotated shapes, and targeting of open doors.
+- **Clearer rotation and controls:** an amber rotation guide, consistent Esc cancellation and right-click context menus.
+- **Better road-exit and sleeper-volume editing:** independent editing sessions, clearer handles and panels, and helpers that disappear when their layers are hidden.
+- **Configurable Undo history:** step and memory limits in Settings > General, with compact Undo/Redo counters on the status bar and commands in Tools.
+- **Small workflow fixes:** a missing-location reminder before saving, corrected blank Library thumbnails and an Inspector that stays hidden when no prefab is open.
 
-The agreed final additions are configurable Undo steps/memory limits and a
-separate Undo/Redo group above the Inspector. Undo limits are **in progress**;
-the control relocation is **implemented, awaiting a successful combined build
-and visual check**. No further feature work is being added to this patch.
+It also adds a 254-layer prefab-editor compatibility profile while preserving oversized imports, updated help and clearer optional development support.
 
-These checks cover the reported editing cases. They do not claim exhaustive
-compatibility with every model or completed height-boundary trials in the game.
-Publication follows the final history/save checks, build and package review.
+Undo and Redo share a configurable step/memory budget. Expired undo steps do not remove edits from saved prefabs. After trimming, Revert all restores the session's starting state and clears Undo/Redo. The history memory budget is not a limit on total application RAM.
+
+See the [release notes](RELEASE_NOTES.md) and [0.2.1 checklist](PATCH_0.2.1.md). These changes do not imply exhaustive model compatibility or completed in-game height-boundary trials.
 
 ### Recovery remains planned
 

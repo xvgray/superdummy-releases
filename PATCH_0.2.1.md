@@ -1,12 +1,13 @@
 # SuperDummy 0.2.1 — editing fixes and usability
 
-Updated **27 October 2026**. **Scope closed; final implementation in progress.**
+Updated **27 October 2026**. **Implementation complete; release preparation in progress.**
 **Not released:** the public download is still
 [0.2.0 — Forge Edition](https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.0).
 
 The scope of this small patch is now fixed. The reported fixes below have
-been checked during development. Configurable Undo limits are the last
-implementation in progress; their completion is not assumed in advance.
+been checked during development. Configurable Undo limits and the revised status-bar presentation are implemented.
+The author has reported no issues during initial use; this does not replace the
+remaining targeted save/history checks.
 
 ## Completed in development builds
 
@@ -33,19 +34,17 @@ compatibility/performance work remain separate.
 
 ## Final work within the closed scope
 
-- [ ] **Configurable Undo history — in progress.** Settings will limit the
-  retained steps and memory shared by Undo/Redo. Older edits must remain in
-  saved prefabs even when their undo steps expire.
-- [ ] **Separate history controls — implemented, pending integration checks.**
-  Undo/Redo have been moved above the Inspector, with a right-edge fallback
-  when it is closed. The combined check/build is waiting for the ongoing
-  history implementation; appearance has not yet been checked.
+- [x] **Configurable Undo history.** Shared step and memory limits under Settings > General; expired undo steps retain their effects in saved prefabs.
+- [x] **Compact history status.** Undo/Redo counters and a detailed tooltip on the bottom status bar, commands in Tools and existing keyboard shortcuts. Buttons above the Inspector have been removed.
+- [x] Implementation check/build reported successful; initial manual use accepted by the author.
+- [ ] Complete the targeted save/reload and history checks below, or explicitly record any deferred cases.
 
 ## Release preparation
 
 - [ ] Verify save/reload, Undo/Redo/Revert all and cancellation after history changes.
 - [ ] Complete a successful final compilation and release build.
-- [ ] Update the version, changelog and guide for the delivered scope.
+- [x] Prepare public release notes, changelog and a minimal homepage update.
+- [ ] Set application/package version to 0.2.1 and confirm bundled help matches the final build.
 - [ ] Review the changes, prepare the package and publish the verified downloads.
 
 There is no release date yet. Closing the scope does not mean a 0.2.1 release,

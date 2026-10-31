@@ -2,9 +2,9 @@
 
 # SuperDummy
 
-**0.2.1 — Forge Edition**
+**0.2.2 — Forge Edition**
 
-*From viewing to creating.*
+*Build, paint and measure — in your own prefab workshop.*
 
 <table>
   <tr>
@@ -30,9 +30,9 @@
 
 A prefab, also called a POI, is a building or place the game can put in its world. SuperDummy lets you work on one without opening a game world — no coding or Unity installation needed.
 
-[![Download for Windows](https://img.shields.io/badge/Download%20for%20Windows-0.2.1%20x64-2EA44F?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/xvgray/superdummy-releases/releases/download/v0.2.1/SuperDummy-0.2.1-forge-edition-windows-x64.zip)
+[![Download for Windows](https://img.shields.io/badge/Download%20for%20Windows-0.2.2%20x64-2EA44F?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/xvgray/superdummy-releases/releases/download/v0.2.2/SuperDummy-0.2.2-forge-edition-windows-x64.zip)
 
-[Release notes](https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.1) · [First steps](#start-in-a-few-minutes) · [What can I make?](#what-you-can-do) · [Roadmap](ROADMAP.md) · [Report an issue](https://github.com/xvgray/superdummy-releases/issues) · [Support development](https://buymeacoffee.com/bullrider)
+[Release notes](https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.2) · [First steps](#start-in-a-few-minutes) · [What can I make?](#what-you-can-do) · [Roadmap](ROADMAP.md) · [Report an issue](https://github.com/xvgray/superdummy-releases/issues) · [Support development](https://buymeacoffee.com/bullrider)
 
 **Windows 10/11, 64-bit · Requires your own 7 Days to Die installation · No game assets included**
 
@@ -41,12 +41,15 @@ A prefab, also called a POI, is a building or place the game can put in its worl
 > [!IMPORTANT]
 > **Please save your work often.** This version is still in development and may contain bugs. There is **no emergency autosave or recovery after a crash**. Unsaved work can be lost if the program closes unexpectedly. Use **Ctrl+S** regularly and **Save Prefab As…** to keep separate copies before major changes.
 >
-> **Water can be previewed, but cannot be edited in 0.2.** Automatic saving, crash recovery and tools for editing whole regions are not included in this release.
+> **Water can be previewed, but cannot be edited in 0.2.2.** Automatic saving, crash recovery and moving/copying whole building regions are not included in this release.
 
 ## What you can do
 
 - **Start a new building** with an empty workspace or flat ground, or open an existing prefab as a local copy.
 - **Build and change individual objects** — place, move, copy, turn and remove them, with a preview and Undo/Redo.
+- **Paint your build** — use the game's textures on a face, a whole block or a flat area; fill connected surfaces, pick a texture and erase paint.
+- **Make wall art from a picture** — Mosaic turns a PNG or JPEG into the game's existing paints, with colour/grayscale and detail choices. No custom-texture mod is needed.
+- **Measure and align** — drag a ruler, place a laser level and show construction guide planes with metre scales in perspective or orthographic views.
 - **Find your favourite parts quickly** in the block Library, choose variants and pin frequently used blocks to Quick Blocks.
 - **Set up supported doors and lights** — choose Open/Closed, Locked/Unlocked or On/Off, and edit supported writable signs.
 - **Prepare your POI for the game** — choose its world locations, set the ground level, add road-connection markers and edit the supplied basic enemy-spawn areas.
@@ -56,7 +59,7 @@ SuperDummy reads blocks, models and textures from your own game installation. It
 
 ## Current editing limits
 
-- **No block-painting tools yet.** Existing paint can be shown and kept by supported edits, but you cannot paint or repaint blocks in this version.
+- **Painting uses supported surfaces and the base game's palette.** Imported pictures become mosaics of existing paints, not new textures. Mosaic currently needs a solid rectangular vertical wall; area and fill tools work on supported flat surfaces.
 - **Mod-added blocks are not loaded.** SuperDummy reads the base game's block definitions and assets, not blocks or assets supplied by mods. A prefab that needs them may have missing parts.
 - **Some game mechanisms are not supported yet**, including gas valves. Seeing an object's model does not mean its special behaviour can be configured or tried out in the editor.
 - **Very large prefabs may have problems loading or being edited.** They can take a long time to open, use a lot of memory or become slow to work with. Save often and keep separate copies of important projects.
@@ -65,7 +68,7 @@ Water editing and emergency autosave/crash recovery are also unavailable, as not
 
 ## Start in a few minutes
 
-1. Download **[SuperDummy 0.2.1 for Windows x64](https://github.com/xvgray/superdummy-releases/releases/download/v0.2.1/SuperDummy-0.2.1-forge-edition-windows-x64.zip)** and extract the **entire ZIP**.
+1. Download **[SuperDummy 0.2.2 for Windows x64](https://github.com/xvgray/superdummy-releases/releases/download/v0.2.2/SuperDummy-0.2.2-forge-edition-windows-x64.zip)** and extract the **entire ZIP**.
 2. Keep the **assets** and **resources** folders beside **superdummy.exe**. There is no installer, and you do not need to install Rust or Bevy.
 3. Run `superdummy.exe`. SuperDummy tries to find your game installation; select the game folder if prompted.
 4. Choose **New Prefab…** to start building, or **Load POI…** to open an existing prefab.
@@ -86,7 +89,12 @@ When updating, unpack the new version into a separate folder so old program file
 | Choose something to build with | Click **Add Block…**. |
 | Turn the block you are holding | Use the **mouse wheel** while pointing at the scene. |
 | Cancel a placement | Press **Esc**. |
-| Undo an edit | Press **Ctrl+Z** in Edit mode. |
+| Undo an edit | Press **Ctrl+Z**. Finish or cancel an active draft or stroke first. |
+| Show or hide the Inspector | Press **Ctrl+I**; the last tab is remembered. |
+| Exact front / right / top view | **Num 1 / 3 / 7**; hold **Ctrl** for the opposite side. |
+| Perspective / orthographic | **Num 5**. |
+| Measure / place a laser level | **R** / **Ctrl+L**. |
+| Show or hide measurement helpers / construction guides | **L** / **G**. |
 | Save your work | Press **Ctrl+S**. |
 
 ## Try your building in the game
@@ -105,19 +113,30 @@ A **location** describes a kind of place, such as Outside settlements or Residen
 
 Check **View > Ground Level** before a game trial. Use **Tools > Set Ground Level…** if the building meets the world terrain at the wrong height. Road-exit markers can request a wilderness approach; several markers give the generator a choice, not a promise of several roads.
 
-## What's new in 0.2.1 — Forge Edition
+## What's new in 0.2.2 — Forge Edition
 
-A focused update to make everyday prefab editing more comfortable.
+This update adds a full painting workspace and practical measurement helpers, along with smoother everyday controls.
 
-- **More predictable building:** improved attachment previews, selection of thin and rotated shapes, and targeting of open doors.
-- **Clearer rotation and controls:** an amber rotation guide, consistent Esc cancellation and right-click context menus.
-- **Better road-exit and sleeper-volume editing:** independent editing sessions, clearer handles and panels, and helpers that disappear when their layers are hidden.
-- **Configurable Undo history:** step and memory limits in Settings > General, with compact Undo/Redo counters on the status bar and commands in Tools.
-- **Small workflow fixes:** a missing-location reminder before saving, corrected blank Library thumbnails and an Inspector that stays hidden when no prefab is open.
+- **Paint · Area · Fill · Mosaic · Pick · Eraser:** dedicated tools with clear target outlines and custom cursors. Paint and Eraser work while you drag, with one Undo step per stroke.
+- **More control over finishing:** Face/Block coverage where supported, square or line-shaped area stamps, connected-surface choices, a starting-plane lock and horizontal/vertical brush strokes.
+- **Pictures made from game paints:** load a PNG/JPEG once, choose a wall rectangle and compare Fit/Crop/Stretch, colour/grayscale, detail and blending options before applying one Undo step.
+- **Measurements:** a draggable ruler, six-axis laser level and XZ/XY/YZ construction guides with a 1 m base scale. These are session helpers, not objects added to the prefab.
+- **Camera and Inspector:** number-pad views, perspective/orthographic switching, a saved camera view beside each saved prefab, remembered Inspector width/tab and a full-width status bar.
+- **Workflow fixes:** dialogs give back the mouse after flying; Undo/Redo keep the placement tool ready when its source is still valid; V remembers shape searches; right click opens compact paint settings.
 
-Undo and Redo share one history budget. Older edits stay in the prefab when their undo steps expire. The memory setting limits retained operations, not the application's total RAM use.
+[Read the full 0.2.2 release notes](https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.2) · [Changelog](CHANGELOG.md)
 
-[Read the full 0.2.1 release notes](https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.1) · [Changelog](CHANGELOG.md)
+### Measurements in the editor
+
+The ruler reads distance as you drag. The laser level helps align floors and walls; construction guides add reference planes and metre marks. Find them in **Inspector > Tools > Measurements**. Sleeper volumes and road exits are together under **Markers**.
+
+![SuperDummy 0.2.2 ruler measuring a 12 m span, laser axes and the construction-guide controls](assets/screenshots/0.2.2/superdummy-0.2.2-measurements.png)
+
+### Paint and picture mosaics
+
+The **Paint** tab contains the six tools. A picture stays loaded for the session, so you can place it again without reopening the file. The preview shows how the limited game-paint palette will represent it; more blocks give more detail.
+
+![SuperDummy 0.2.2 Mosaic tool with a cat image, prepared mosaic preview and colour/detail settings](assets/screenshots/0.2.2/superdummy-0.2.2-paint-mosaic.png)
 
 ## A closer look at 0.2
 

@@ -2,11 +2,42 @@
 
 All notable changes to SuperDummy will be documented in this file.
 
-The latest release is SuperDummy 0.2.1 — Forge Edition. The project remains under active development; reported checks do not imply full compatibility with every game asset or mod.
+The latest release is SuperDummy 0.2.2 — Forge Edition. The project remains under active development; reported checks do not imply full compatibility with every game asset or mod.
 
 ## [Unreleased]
 
 Nothing yet.
+
+## [0.2.2] - 2026-10-31
+
+**Forge Edition — paint, mosaics, camera views and measurements.**
+
+### Added
+
+- Paint workspace with Paint, Area, Fill, Mosaic, Pick and Eraser, tool cursors and accurate region outlines.
+- Face/Block coverage, area stamp shapes and sizes, connectivity choices and connected planar Fill.
+- Continuous Paint/Eraser strokes with live material previews and one Undo per gesture; plane lock, stroke direction and eraser size.
+- PNG/JPEG mosaics using native game paints, session image caching, a native image picker, detail/blending choices and a grayscale palette.
+- Draggable ruler, six-axis laser level and XZ/XY/YZ construction guide planes with a 1 m base scale.
+- Number-pad camera views, orthographic projection and saved per-prefab camera views in an editor-only sidecar.
+- Compact right-click paint-tool settings.
+
+### Changed
+
+- Inspector uses Block / Markers / Library / Paint / Tools, with shared collapsible measurement sections and remembered width/tab.
+- Status bar spans the window; region outlines omit unnecessary internal grid lines.
+- Pick returns to the previous painting tool; V keeps the shape-search text for the session.
+- Beginner help now covers painting, mosaics, exact camera views and measurements.
+
+### Fixed
+
+- Hidden/captured mouse after opening dialogs while flying, including the Image mosaic dialog.
+- Undo/Redo disarming block placement; unsafe Move/Duplicate grabs when history changes their source.
+- Orthographic depth clipping before reaching the prefab.
+- Measurement startup/label errors and overlays crossing interface panels.
+- Inspector resizing, tab accessibility and history shortcuts outside block Edit mode for painting.
+
+Painting planned under the working label 0.2.5 shipped early in 0.2.2. Water editing, emergency autosave/recovery and mod-added block loading remain future work. Reported application trials do not cover every save/failure path or every in-game combination.
 
 ## [0.2.1] - 2026-10-27
 

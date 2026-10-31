@@ -1,43 +1,59 @@
-# SuperDummy 0.2.1 — Forge Edition
+# SuperDummy 0.2.2 — Forge Edition
 
-A focused patch for more comfortable prefab editing, with improved selection, placement and controls, plus configurable Undo history.
+**Released 31 October 2026.** Paint, picture mosaics and practical measurements for your prefab workshop.
 
-## Highlights
+## Paint and finish your build
 
-- **More predictable building:** improved attachment previews, selection of thin and rotated shapes, and targeting of open doors.
-- **Clearer rotation and controls:** an amber rotation guide, consistent Esc cancellation and right-click context menus.
-- **Better road-exit and sleeper-volume editing:** independent editing sessions, clearer handles and panels, and helpers that disappear when their layers are hidden.
-- **Configurable Undo history:** step and memory limits in Settings > General, with compact Undo/Redo counters on the status bar and commands in Tools.
-- **Small workflow fixes:** a missing-location reminder before saving, corrected blank Library thumbnails and an Inspector that stays hidden when no prefab is open.
+- A dedicated **Paint** tab: **Paint, Area, Fill, Mosaic, Pick and Eraser**, with tool symbols, custom cursors and clear outlines of the surfaces that will change.
+- **Face / Block** coverage where supported. Block affects all confirmed paintable sides of the chosen blocks.
+- **Paint** and **Eraser** work while you drag, show the actual result during the stroke and create one Undo step when you release. Esc cancels the unfinished stroke.
+- **Area** offers square, horizontal and vertical stamps, adjustable size and a choice to include separate surfaces. **Fill** follows one connected flat region with a matching finish and stops at gaps, corners and different finishes.
+- A starting-plane lock and horizontal/vertical stroke directions help keep paint on the intended wall, floor or ceiling. The eraser has its own size control.
+- **Pick** returns to the previously used paint tool after taking a sample. Right click opens a compact settings menu for the current tool.
 
-## Undo history
+## Turn a picture into a wall mosaic
 
-- Configure **Undo steps** (1–1000) and **Memory limit** (16–2048 MB) under **Settings > General > Undo history**. Defaults are 100 steps and 256 MB.
-- Undo and Redo share the same budget. The memory limit may reduce the available steps before the step limit is reached.
-- Expiring old undo steps does not remove their edits from the prefab or from subsequent saves.
-- The status bar shows **Undo: U/L · Redo: R**. Hover for combined usage, estimated memory and the next available operations.
-- Use **Tools > Undo/Redo**, **Ctrl+Z**, **Ctrl+Shift+Z** or **Ctrl+Y** in Edit mode.
-- After history has been trimmed, **Revert all changes** restores the session's starting state and clears the Undo/Redo window.
-- The memory limit covers retained operations only; the document and additional history bookkeeping use memory outside this budget.
+Load a local PNG/JPEG and select two corners on a solid vertical wall. Mosaic chooses from the game's existing paints, so the result is ordinary prefab paint data, without a custom-texture mod or the source picture in the game pack.
 
-## Other changes
+- The loaded image and thumbnail stay available throughout the program session.
+- Compare **Fit / Crop / Stretch**, **Colour / Grayscale**, **Smooth / Sharp / Preserve outlines** and optional gentle colour blending.
+- See a prepared preview beside the settings, then apply the whole mosaic as one Undo step.
+- Image detail is limited by the number of block faces and the game's palette. Small features and exact colours cannot always be preserved.
 
-- A 254-layer prefab-editor compatibility profile, while preserving oversized imports. This is not a claim of completed in-game height-boundary testing.
-- Clearer optional development support, without automatic reminders.
-- Updated built-in help for the revised editor workflow.
+## Measure and align
 
-## Updating
+Open **Inspector > Tools > Measurements**:
 
-Download **SuperDummy-0.2.1-forge-edition-windows-x64.zip** from this release's Assets section and extract the entire archive into a separate folder. Keep **assets** and **resources** beside **superdummy.exe**.
+- **Ruler:** press **R**, then press, drag and release to read a distance and its X/Y/Z spans. Snap to the 1 m grid and keep the result if wanted.
+- **Laser level:** **Ctrl+L** places or moves one point with six red axes and metre marks; **Ctrl+Shift+L** clears it.
+- **Construction guides:** XZ/XY/YZ reference planes, Auto with axis views, spacing and offsets, main axes and edge rulers. **G** toggles the guides; **L** toggles all measurement helpers.
 
-Your saved local prefabs and preferences remain in their own folders. No Rust or Bevy installation is needed. GitHub's automatic Source code archives are not the Windows application.
+All three work with perspective and orthographic views. They are session helpers: they are not saved as game blocks or markers.
 
-## Requirements and limitations
+## Camera, layout and editing fixes
 
-Windows 10/11 x64, a Vulkan-capable GPU with current drivers, and your own compatible 7 Days to Die installation. Game assets are not included.
+- **Num 1 / 3 / 7** for front/right/top; Ctrl for opposite views; **Num 5** for perspective/orthographic; **Num .** to frame the selection or prefab. Orthographic depth clipping was corrected.
+- Save a local prefab to remember its camera view in a small adjacent `NAME.superdummy.json` editor file. It is not required by the game and is not packed into exported mods.
+- Inspector tabs are **Block, Markers, Library, Paint and Tools**. Sleeper volumes and road exits are collapsible sections under Markers. **Ctrl+I** reopens the last tab; the chosen panel width is remembered.
+- The bottom status bar stays visible across the window.
+- Opening a dialog while flying releases the mouse and stops the camera. Closing the dialog leaves pointer mode; use Tab or a fresh middle-button press to fly again.
+- Undo/Redo no longer put away the placement tool. A Move/Duplicate grab is safely released if history changes its source. Shape searches in **V** are kept for the session.
+- Updated beginner help, tool instructions and shortcuts.
 
-**Save often and keep separate copies of important work.** Emergency autosave and crash recovery are not included. Painting, water editing, mod-added block loading and region editing remain outside this patch. Very large prefabs can still load slowly or use substantial memory.
+## Updating and first steps
 
-The development baseline is **7 Days to Die 3.3.0 b18**. Reported checks cover specific editing cases, not every model, game mechanism or mod.
+Download **SuperDummy-0.2.2-forge-edition-windows-x64.zip** from Assets and extract the entire archive into a separate folder. Keep **assets** and **resources** beside **superdummy.exe**. No Rust or Bevy installation is needed; GitHub's automatic Source code archives are not the Windows application.
 
-[Report a problem](https://github.com/xvgray/superdummy-releases/issues) · [Roadmap](https://github.com/xvgray/superdummy-releases/blob/main/ROADMAP.md) · [Support development](https://buymeacoffee.com/bullrider)
+Use **Help > User guide** for the beginner walkthrough, painting and measurement instructions. Existing local prefabs and preferences remain in their own folders.
+
+**Export is optional.** A saved LocalPrefabs building with suitable World placement choices can be considered when generating a new world. Export mainly helps restrict biomes or prepare a mod folder to share; it does not save your working document.
+
+## Requirements and current limits
+
+Windows 10/11 x64, a Vulkan-capable GPU with current drivers, and your own compatible **7 Days to Die** installation. The development baseline is **3.3.0 b18**; game assets are not included.
+
+**Save often and keep separate copies of important work.** There is no emergency autosave or crash recovery. Water editing, mod-added block loading, whole-room move/copy and special mechanisms such as gas valves are not included. Very large prefabs can still load slowly, use substantial memory or become difficult to edit.
+
+Painting is limited to supported game-paintable surfaces. Area/Fill require supported grid-aligned planes; Mosaic requires a solid rectangular vertical wall and uses the existing game paints, not arbitrary new textures. Measurement helpers are not saved between program sessions. Reported application checks cover specific workflows, not every asset, save/failure case or in-game combination. Release preparation does not include a new GUI or game test run.
+
+[Project and screenshots](https://github.com/xvgray/superdummy-releases) · [Report a problem](https://github.com/xvgray/superdummy-releases/issues) · [Roadmap](https://github.com/xvgray/superdummy-releases/blob/main/ROADMAP.md) · [Support development](https://buymeacoffee.com/bullrider)

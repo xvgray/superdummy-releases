@@ -1,7 +1,7 @@
 # SuperDummy roadmap
 
-Updated **27 October 2026**. Latest release:
-**[0.2.1 — Forge Edition](https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.1)**.
+Updated **31 October 2026**. Latest release:
+**[0.2.2 — Forge Edition](https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.2)**.
 
 The aim is to bring the tools available in the game's prefab editor to
 SuperDummy, then add tools that make building easier and faster. Work continues
@@ -11,6 +11,20 @@ step by step on missing features, bug fixes and comfort of use.
 targets; order and scope may change. A checked item means the stated feature
 is included in the release, not that every model, game version or mod has been
 verified.
+
+## Released in 0.2.2 — painting, camera and measurements
+
+- [x] Paint / Area / Fill / Mosaic / Pick / Eraser, with symbols, tool cursors and compact right-click settings.
+- [x] Face/Block coverage, square/line area stamps, connectivity choices and connected planar Fill.
+- [x] Live Paint/Eraser strokes, one Undo per stroke, a starting-plane lock, stroke directions and adjustable eraser size.
+- [x] Image mosaics from native game paints: session image source, colour/grayscale, fitting, detail and blending options.
+- [x] Draggable ruler, laser level and construction guide planes with metre scales, compatible with perspective and orthographic views.
+- [x] Number-pad camera views, framing, corrected ortho depth and per-prefab camera-view files.
+- [x] One Inspector with remembered tab/width, Markers sections, Tools > Measurements and a full-width status bar.
+- [x] Dialog cursor handover, Undo/Redo preserving safe placement state and remembered V searches.
+- [x] Updated beginner help and shortcuts.
+
+Painting and Mosaic were brought forward from the internal 0.2.5 plan into this release. They use the game's own paints; importing new game textures is still future work. See [0.2.2 release notes](RELEASE_NOTES.md) and the [release summary](PATCH_0.2.2.md).
 
 ## Released in 0.2.0 — Forge Edition
 
@@ -47,10 +61,10 @@ LocalPrefabs to make it available for a new world's generation. Export mainly
 helps restrict biomes or prepare a mod folder to share; it does not save the
 working document. The game still decides whether a building is placed.
 
-## What 0.2 does not include
+## What the current release does not include
 
-- Painting or repainting blocks. Existing paint can be shown and preserved by
-  supported edits, but there are no painting tools yet.
+- Importing arbitrary new game textures. Mosaic approximates pictures with
+  existing paints; it does not extend the game palette.
 - Editing water. The water preview is not a water-editing tool or fluid simulation.
 - Emergency autosave or crash recovery. **Use Ctrl+S often and keep separate
   copies of important work.** Bugs may still occur.
@@ -61,7 +75,7 @@ working document. The game still decides whether a building is placed.
 Very large prefabs may have loading or editing problems, long waits, high memory
 use or low frame rates. Performance and reliability remain ongoing work.
 
-## 0.2.1 — editing fixes and usability
+## Released in 0.2.1 — editing fixes and usability
 
 This focused patch improves everyday prefab editing:
 
@@ -75,22 +89,22 @@ It also adds a 254-layer prefab-editor compatibility profile while preserving ov
 
 Undo and Redo share a configurable step/memory budget. Expired undo steps do not remove edits from saved prefabs. After trimming, Revert all restores the session's starting state and clears Undo/Redo. The history memory budget is not a limit on total application RAM.
 
-See the [release notes](RELEASE_NOTES.md) and [0.2.1 checklist](PATCH_0.2.1.md). These changes do not imply exhaustive model compatibility or completed in-game height-boundary trials.
+See the [0.2.1 release notes](https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.1) and [0.2.1 checklist](PATCH_0.2.1.md). These changes do not imply exhaustive model compatibility or completed in-game height-boundary trials.
 
 ### Recovery remains planned
 
-The earlier plan assigned recovery to 0.2.1. The immediate 0.2.1 scope is now
-the focused patch above. Versioned session recovery, background recovery
+The earlier plan assigned recovery to 0.2.1; that release instead delivered
+the focused editing fixes above. Versioned session recovery, background recovery
 saving with an explicit restore choice, and bounded storage/memory costs
 remain planned for a later reliability update, **without an assigned version**.
-They are not included in 0.2.1.
+They are not included in 0.2.2.
 
 ## Later release targets
 
 | Target | What it should help you do |
 | --- | --- |
 | **0.3 — work with regions** | Select a room, wall or floor; move, copy, delete and rotate supported groups with one Undo. Add isolation/height sections for interiors. Introduce basic single-cell Add/Remove water. |
-| **0.4 — build and finish faster** | Build lines, walls and shells; repeat objects; replace compatible block families; paint faces and surfaces. Add a researched structural-support analysis. |
+| **0.4 — build and finish faster** | Build lines, walls and shells; repeat objects; replace compatible block families; extend finishing tools beyond the native painting already available. Add a researched structural-support analysis. |
 | **0.5 — reuse parts and shape the surroundings** | Reuse your own building fragments, copy between documents, use decoration/terrain tools and starting-terrain templates. Add bounded Fill basin after basic water editing is accepted. |
 | **0.6 — more gameplay authoring** | Extend the existing sleeper, object-state and metadata tools with more areas, triggers and clearly shown connections between objects. Investigate additional game mechanisms individually. |
 | **0.7 — check and hand off to the game** | Build on the export already available in 0.2: clearer problem reports, work on far-distance/derived files, easier game checks and a separate test-world workflow. |
@@ -98,14 +112,14 @@ They are not included in 0.2.1.
 | **1.0 — a dependable workshop** | A clear supported scope, reliable workflows, comfortable controls, documentation and explicit compatibility limits. |
 
 These are planned packages, not promises that every idea will ship together.
-Features delivered early, such as signs, doors, road exits and basic export,
+Features delivered early, such as signs, doors, road exits, native painting and basic export,
 are already listed under 0.2 rather than being advertised as future work.
 
 ### Terrain sculpt — an early design for a later release
 
 ![Terrain sculpt concept inside the existing SuperDummy toolbar and Inspector](assets/screenshots/terrain-sculpt-concept-02.png)
 
-**Design mockup — this tool is not implemented or included in 0.2.1.**
+**Design mockup — this tool is not implemented or included in 0.2.2.**
 The proposed Terrain tab keeps the existing Inspector and adds Raise, Lower,
 Smooth and Flatten brushes, with size, strength and a soft edge. The brush
 would shape the ground directly in the scene, with one Undo per stroke.
@@ -125,6 +139,7 @@ target**, with no release date; the design and scope can change.
 - Broader performance work based on measurements, especially for large prefabs.
 - Further special mechanisms, including gas valves and powered devices, after
   their data and game behaviour have been researched.
+- Optional editing of the saved ruler's A/B endpoints, without taking clicks from building tools.
 - GLB/Blender export as a longer-term possibility.
 
 ## Checks still open

@@ -219,6 +219,8 @@ The application source is kept in a separate private repository. This public pag
 
 I'm continuing to develop SuperDummy toward the tools available in the game's own prefab editor — and additional features beyond them. Making building clearer, faster and more comfortable is just as important as adding missing features. Work continues on new tools, bug fixes and a friendlier everyday workflow; these are development goals, not features already available in 0.2.
 
+**Next in development: 0.2.3.** Structural-stability previews, block HP and damaged-door models, and shared Studio controls are implemented in the development build. Region selection is being refined, with group Delete/Copy/Move planned next. This update is not released yet; the current download remains 0.2.2.
+
 See the [roadmap](ROADMAP.md) for released features and the next planned steps.
 
 ## Support the project

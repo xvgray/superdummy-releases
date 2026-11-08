@@ -1,6 +1,6 @@
 # SuperDummy roadmap
 
-Updated **31 October 2026**. Latest release:
+Updated **8 November 2026**. Latest release:
 **[0.2.2 — Forge Edition](https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.2)**.
 
 The aim is to bring the tools available in the game's prefab editor to
@@ -11,6 +11,23 @@ step by step on missing features, bug fixes and comfort of use.
 targets; order and scope may change. A checked item means the stated feature
 is included in the release, not that every model, game version or mod has been
 verified.
+
+## In development: 0.2.3 — stability, block health and easier editing
+
+**Not released yet. The latest download remains 0.2.2.**
+
+Implemented in the development build, with author-reported application checks:
+- Structural-stability colours for blocks and terrain, optional background refresh after editing pauses, and placement-warning bubbles. These are editor estimates, not a guarantee of in-game behaviour.
+- Remaining-HP editing, restoration to full health and supported damaged door models.
+- Shared Studio controls across the agreed Inspector panels, plus layout and lamp-preview crash fixes.
+
+Still being completed for the proposed 0.2.3 scope:
+- Comfortable region selection. The first handle implementation needs fixes for dragging, keeping the resized selection, clipping to the scene and the Inspector's single/group context.
+- One **Select** tool: click a block, or drag to select a region; Shift adds and Ctrl removes whole objects.
+- Group Delete, Copy/Paste and Move using one preview and one Undo. Planning/history infrastructure exists, but these actions are not yet available from the interface.
+- Targeted save/reload, Undo/Redo, cancellation, performance and game checks before release. The existing recovery requirement for large group edits is still unresolved.
+
+The full Settings restyle is deferred. Group rotation, isolation, terrain sculpting and gameplay wiring remain later work. Features listed here are development progress, not additions to the current download.
 
 ## Released in 0.2.2 — painting, camera and measurements
 
@@ -103,8 +120,8 @@ They are not included in 0.2.2.
 
 | Target | What it should help you do |
 | --- | --- |
-| **0.3 — work with regions** | Select a room, wall or floor; move, copy, delete and rotate supported groups with one Undo. Add isolation/height sections for interiors. Introduce basic single-cell Add/Remove water. |
-| **0.4 — build and finish faster** | Build lines, walls and shells; repeat objects; replace compatible block families; extend finishing tools beyond the native painting already available. Add a researched structural-support analysis. |
+| **0.3 — work with regions** | Extend the basic region work targeted at 0.2.3 with supported group rotation and isolation/height sections for interiors. Introduce basic single-cell Add/Remove water. |
+| **0.4 — build and finish faster** | Build lines, walls and shells; repeat objects; replace compatible block families; extend finishing tools beyond the native painting already available. Structural-stability analysis has been brought forward to the 0.2.3 development build. |
 | **0.5 — reuse parts and shape the surroundings** | Reuse your own building fragments, copy between documents, use decoration/terrain tools and starting-terrain templates. Add bounded Fill basin after basic water editing is accepted. |
 | **0.6 — more gameplay authoring** | Extend the existing sleeper, object-state and metadata tools with more areas, triggers and clearly shown connections between objects. Investigate additional game mechanisms individually. |
 | **0.7 — check and hand off to the game** | Build on the export already available in 0.2: clearer problem reports, work on far-distance/derived files, easier game checks and a separate test-world workflow. |

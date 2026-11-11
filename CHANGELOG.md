@@ -2,11 +2,33 @@
 
 All notable changes to SuperDummy will be documented in this file.
 
-The latest release is SuperDummy 0.2.2 — Forge Edition. The project remains under active development; reported checks do not imply full compatibility with every game asset or mod.
+The project remains under active development. See the [Releases page](https://github.com/xvgray/superdummy-releases/releases) for published builds.
 
 ## [Unreleased]
 
 Nothing yet.
+
+## [0.2.3] - 2026-11-11
+
+**Forge Edition — build from references, edit groups and check structural support.**
+
+### Added
+
+- GLB references with Textured and Solid views, adjustable size and opacity, and saved project settings.
+- Group selection with copy, paste, move, delete and 90° rotation or tilt.
+- Structural stability overlay for blocks and terrain, plus placement warnings.
+- Remaining HP editing and damage previews for supported block models.
+
+### Changed
+
+- More consistent Inspector controls and clearer sleeper-volume labels.
+- Mosaic previews stay in the dialog, and the area limit appears during selection. After you apply a large Mosaic or Fill, the scene updates in batches with a progress bar.
+
+### Fixed
+
+- Esc cancels an active ruler measurement or laser placement. The V picker remembers the last shape category.
+- Group paste previews stay aligned after the prefab grows, and rotation arrows remain readable from a distance.
+- A crash when preparing a light-block preview.
 
 ## [0.2.2] - 2026-10-31
 
@@ -261,7 +283,9 @@ First stable release — **Water Edition**, following the three 0.1.0 previews.
 - Runtime logging
 - English user interface
 
-[Unreleased]: https://github.com/xvgray/superdummy-releases/compare/v0.2.1...HEAD
+[Unreleased]: https://github.com/xvgray/superdummy-releases/compare/v0.2.3...HEAD
+[0.2.3]: https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.3
+[0.2.2]: https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.2
 [0.2.1]: https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.1
 [0.2.0]: https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.0
 [0.1.0]: https://github.com/xvgray/superdummy-releases/releases/tag/v0.1.0

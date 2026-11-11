@@ -1,33 +1,21 @@
 # SuperDummy roadmap
 
-Updated **8 November 2026**. Latest release:
-**[0.2.2 — Forge Edition](https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.2)**.
+[Latest public release](https://github.com/xvgray/superdummy-releases/releases/latest) · [Changelog](CHANGELOG.md)
 
 The aim is to bring the tools available in the game's prefab editor to
 SuperDummy, then add tools that make building easier and faster. Work continues
 step by step on missing features, bug fixes and comfort of use.
 
-**This is a direction, not a release calendar.** Future version numbers are
-targets; order and scope may change. A checked item means the stated feature
-is included in the release, not that every model, game version or mod has been
-verified.
+Future version numbers are targets. Order and scope may change as features are tested.
 
-## In development: 0.2.3 — stability, block health and easier editing
+## Released in 0.2.3 — reference models, group editing and structural checks
 
-**Not released yet. The latest download remains 0.2.2.**
+- **Reference models:** import GLB guides, fit them to the build and keep their settings in a separate editor project file.
+- **Group editing:** select, copy, paste, move, delete, rotate and tilt supported blocks together. Each edit can be undone in one step.
+- **Structural stability and block health:** review support and placement warnings, and set starting damage on supported blocks.
+- **Everyday controls:** more consistent Inspector controls, clearer previews and fixes to Paint, measurements and the shape picker.
 
-Implemented in the development build, with author-reported application checks:
-- Structural-stability colours for blocks and terrain, optional background refresh after editing pauses, and placement-warning bubbles. These are editor estimates, not a guarantee of in-game behaviour.
-- Remaining-HP editing, restoration to full health and supported damaged door models.
-- Shared Studio controls across the agreed Inspector panels, plus layout and lamp-preview crash fixes.
-
-Still being completed for the proposed 0.2.3 scope:
-- Comfortable region selection. The first handle implementation needs fixes for dragging, keeping the resized selection, clipping to the scene and the Inspector's single/group context.
-- One **Select** tool: click a block, or drag to select a region; Shift adds and Ctrl removes whole objects.
-- Group Delete, Copy/Paste and Move using one preview and one Undo. Planning/history infrastructure exists, but these actions are not yet available from the interface.
-- Targeted save/reload, Undo/Redo, cancellation, performance and game checks before release. The existing recovery requirement for large group edits is still unresolved.
-
-The full Settings restyle is deferred. Group rotation, isolation, terrain sculpting and gameplay wiring remain later work. Features listed here are development progress, not additions to the current download.
+See the [0.2.3 release notes](https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.3).
 
 ## Released in 0.2.2 — painting, camera and measurements
 
@@ -41,7 +29,7 @@ The full Settings restyle is deferred. Group rotation, isolation, terrain sculpt
 - [x] Dialog cursor handover, Undo/Redo preserving safe placement state and remembered V searches.
 - [x] Updated beginner help and shortcuts.
 
-Painting and Mosaic were brought forward from the internal 0.2.5 plan into this release. They use the game's own paints; importing new game textures is still future work. See [0.2.2 release notes](RELEASE_NOTES.md) and the [release summary](PATCH_0.2.2.md).
+Painting and Mosaic were brought forward from the internal 0.2.5 plan into this release. They use the game's own paints; importing new game textures is still future work. See [0.2.2 release notes](https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.2) and the [release summary](https://github.com/xvgray/superdummy-releases/blob/v0.2.2/PATCH_0.2.2.md).
 
 ## Released in 0.2.0 — Forge Edition
 
@@ -78,7 +66,7 @@ LocalPrefabs to make it available for a new world's generation. Export mainly
 helps restrict biomes or prepare a mod folder to share; it does not save the
 working document. The game still decides whether a building is placed.
 
-## What the current release does not include
+## Current limits
 
 - Importing arbitrary new game textures. Mosaic approximates pictures with
   existing paints; it does not extend the game palette.
@@ -87,7 +75,7 @@ working document. The game still decides whether a building is placed.
   copies of important work.** Bugs may still occur.
 - Loading block definitions and assets added by mods.
 - Full support for all game mechanisms, including gas valves and powered devices.
-- Moving/copying whole rooms, floors or other selected regions as one operation.
+- Copying between different prefabs. The 0.2.3 group clipboard works within the open prefab.
 
 Very large prefabs may have loading or editing problems, long waits, high memory
 use or low frame rates. Performance and reliability remain ongoing work.
@@ -106,7 +94,7 @@ It also adds a 254-layer prefab-editor compatibility profile while preserving ov
 
 Undo and Redo share a configurable step/memory budget. Expired undo steps do not remove edits from saved prefabs. After trimming, Revert all restores the session's starting state and clears Undo/Redo. The history memory budget is not a limit on total application RAM.
 
-See the [0.2.1 release notes](https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.1) and [0.2.1 checklist](PATCH_0.2.1.md). These changes do not imply exhaustive model compatibility or completed in-game height-boundary trials.
+See the [0.2.1 release notes](https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.1) and [0.2.1 checklist](https://github.com/xvgray/superdummy-releases/blob/v0.2.2/PATCH_0.2.1.md). These changes do not imply exhaustive model compatibility or completed in-game height-boundary trials.
 
 ### Recovery remains planned
 
@@ -114,29 +102,26 @@ The earlier plan assigned recovery to 0.2.1; that release instead delivered
 the focused editing fixes above. Versioned session recovery, background recovery
 saving with an explicit restore choice, and bounded storage/memory costs
 remain planned for a later reliability update, **without an assigned version**.
-They are not included in 0.2.2.
 
 ## Later release targets
 
 | Target | What it should help you do |
 | --- | --- |
-| **0.3 — work with regions** | Extend the basic region work targeted at 0.2.3 with supported group rotation and isolation/height sections for interiors. Introduce basic single-cell Add/Remove water. |
-| **0.4 — build and finish faster** | Build lines, walls and shells; repeat objects; replace compatible block families; extend finishing tools beyond the native painting already available. Structural-stability analysis has been brought forward to the 0.2.3 development build. |
+| **0.3 — work on one part at a time** | Add isolation and height sections for interiors, and basic single-cell water editing. Named editor layers for visibility and locking are planned for 0.3 or later. |
+| **0.4 — build and finish faster** | Build lines, walls and shells, repeat objects, replace compatible block families, and introduce local plugins for data export and processing selected blocks. |
 | **0.5 — reuse parts and shape the surroundings** | Reuse your own building fragments, copy between documents, use decoration/terrain tools and starting-terrain templates. Add bounded Fill basin after basic water editing is accepted. |
 | **0.6 — more gameplay authoring** | Extend the existing sleeper, object-state and metadata tools with more areas, triggers and clearly shown connections between objects. Investigate additional game mechanisms individually. |
 | **0.7 — check and hand off to the game** | Build on the export already available in 0.2: clearer problem reports, work on far-distance/derived files, easier game checks and a separate test-world workflow. |
 | **0.8 — optional building assistance** | Allow a chosen local or remote agent to inspect and propose bounded edits, with a preview, approval and Undo. The manual editor remains usable without an agent or paid model. |
 | **1.0 — a dependable workshop** | A clear supported scope, reliable workflows, comfortable controls, documentation and explicit compatibility limits. |
 
-These are planned packages, not promises that every idea will ship together.
-Features delivered early, such as signs, doors, road exits, native painting and basic export,
-are already listed under 0.2 rather than being advertised as future work.
+The first planned plugins would use a documented local API. Example commands include exporting a block list to CSV and proposing a replacement for selected blocks with a preview and one Undo step.
 
 ### Terrain sculpt — an early design for a later release
 
 ![Terrain sculpt concept inside the existing SuperDummy toolbar and Inspector](assets/screenshots/terrain-sculpt-concept-02.png)
 
-**Design mockup — this tool is not implemented or included in 0.2.2.**
+**Design mockup for a future terrain tool.**
 The proposed Terrain tab keeps the existing Inspector and adds Raise, Lower,
 Smooth and Flatten brushes, with size, strength and a soft edge. The brush
 would shape the ground directly in the scene, with one Undo per stroke.
@@ -161,11 +146,9 @@ target**, with no release date; the design and scope can change.
 
 ## Checks still open
 
-Publication does not turn unchecked cases into passed checks. The earlier
-roadmap's dedicated waterfall-visibility example still needs its own recheck.
-Large-prefab responsiveness and less common failure/input paths also need
-continued investigation. Reported bugs will be tracked with concrete examples,
-not hidden by a general “all compatible” claim.
+Open checks include comparing the stability preview with the game, testing
+responsiveness on very large prefabs and rechecking the earlier waterfall
+visibility example.
 
 Use the **[roadmap discussion](https://github.com/xvgray/superdummy-releases/issues/2)**
 for priorities and ideas, or **[report a bug](https://github.com/xvgray/superdummy-releases/issues/new/choose)**

@@ -2,9 +2,9 @@
 
 # SuperDummy
 
-**0.2.2 — Forge Edition**
+**0.2.3 — Forge Edition**
 
-*Build, paint and measure — in your own prefab workshop.*
+*Build from a 3D reference, reuse entire sections and check structural support.*
 
 <table>
   <tr>
@@ -30,9 +30,9 @@
 
 A prefab, also called a POI, is a building or place the game can put in its world. SuperDummy lets you work on one without opening a game world — no coding or Unity installation needed.
 
-[![Download for Windows](https://img.shields.io/badge/Download%20for%20Windows-0.2.2%20x64-2EA44F?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/xvgray/superdummy-releases/releases/download/v0.2.2/SuperDummy-0.2.2-forge-edition-windows-x64.zip)
+[![Download for Windows](https://img.shields.io/badge/Download%20for%20Windows-x64-2EA44F?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/xvgray/superdummy-releases/releases/latest)
 
-[Release notes](https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.2) · [First steps](#start-in-a-few-minutes) · [What can I make?](#what-you-can-do) · [Roadmap](ROADMAP.md) · [Report an issue](https://github.com/xvgray/superdummy-releases/issues) · [Support development](https://buymeacoffee.com/bullrider)
+[What's new](#whats-new-in-023) · [First steps](#start-in-a-few-minutes) · [What can I make?](#what-you-can-do) · [Roadmap](ROADMAP.md) · [Report an issue](https://github.com/xvgray/superdummy-releases/issues) · [Support development](https://buymeacoffee.com/bullrider)
 
 **Windows 10/11, 64-bit · Requires your own 7 Days to Die installation · No game assets included**
 
@@ -40,8 +40,15 @@ A prefab, also called a POI, is a building or place the game can put in its worl
 
 > [!IMPORTANT]
 > **Please save your work often.** This version is still in development and may contain bugs. There is **no emergency autosave or recovery after a crash**. Unsaved work can be lost if the program closes unexpectedly. Use **Ctrl+S** regularly and **Save Prefab As…** to keep separate copies before major changes.
->
-> **Water can be previewed, but cannot be edited in 0.2.2.** Automatic saving, crash recovery and moving/copying whole building regions are not included in this release.
+
+## What's new in 0.2.3
+
+- **Build around a 3D model.** Open **Inspector > References**, add a GLB and set its size, rotation and opacity. Switch to **Solid** to see its shape, then hide the model to inspect your blockwork. SuperDummy saves the reference settings in a `.superdummy.json` file beside the prefab. If a model moves, use **Locate model...** to reconnect it. The game export contains the blockwork.
+- **Reuse walls, rooms and floors.** Drag in **Select** to mark a group, then copy, move, turn, tilt or delete it. Paste the same section repeatedly to build a row of windows or stack floors. Each placement is one Undo step.
+- **Check structural support as you build.** Turn on **View > Structural stability** for a colour map of the prefab and terrain. Placement warnings call out possible support problems. The result is an estimate under the editor's ground assumptions.
+- **Set how damaged a block starts.** Enter its remaining HP in the Inspector. Supported models, such as certain doors, show the corresponding damage state.
+
+[Release notes](RELEASE_NOTES.md) · [Full changelog](CHANGELOG.md) · [Development roadmap](ROADMAP.md)
 
 ## What you can do
 
@@ -62,13 +69,14 @@ SuperDummy reads blocks, models and textures from your own game installation. It
 - **Painting uses supported surfaces and the base game's palette.** Imported pictures become mosaics of existing paints, not new textures. Mosaic currently needs a solid rectangular vertical wall; area and fill tools work on supported flat surfaces.
 - **Mod-added blocks are not loaded.** SuperDummy reads the base game's block definitions and assets, not blocks or assets supplied by mods. A prefab that needs them may have missing parts.
 - **Some game mechanisms are not supported yet**, including gas valves. Seeing an object's model does not mean its special behaviour can be configured or tried out in the editor.
+- **Reference import uses GLB with embedded geometry.** Supported PNG/JPEG textures can be embedded or stored beside the model. Some large files can be imported without textures when their geometry fits the limits.
 - **Very large prefabs may have problems loading or being edited.** They can take a long time to open, use a lot of memory or become slow to work with. Save often and keep separate copies of important projects.
 
 Water editing and emergency autosave/crash recovery are also unavailable, as noted above. Version 0.2 may still contain bugs; please keep that in mind when working on a large or important build.
 
 ## Start in a few minutes
 
-1. Download **[SuperDummy 0.2.2 for Windows x64](https://github.com/xvgray/superdummy-releases/releases/download/v0.2.2/SuperDummy-0.2.2-forge-edition-windows-x64.zip)** and extract the **entire ZIP**.
+1. Download **[the latest Windows x64 release](https://github.com/xvgray/superdummy-releases/releases/latest)** and extract the **entire ZIP**.
 2. Keep the **assets** and **resources** folders beside **superdummy.exe**. There is no installer, and you do not need to install Rust or Bevy.
 3. Run `superdummy.exe`. SuperDummy tries to find your game installation; select the game folder if prompted.
 4. Choose **New Prefab…** to start building, or **Load POI…** to open an existing prefab.
@@ -88,6 +96,8 @@ When updating, unpack the new version into a separate folder so old program file
 | Move the camera | In camera control, use **WASD**; **Space** goes up and **Alt** goes down. |
 | Choose something to build with | Click **Add Block…**. |
 | Turn the block you are holding | Use the **mouse wheel** while pointing at the scene. |
+| Copy or move a selected area | **Ctrl+C** or **Ctrl+X**, then **Ctrl+V** and click to place. |
+| Turn or tilt a group preview | **Mouse wheel** or **Ctrl + wheel**, in 90° steps. |
 | Cancel a placement | Press **Esc**. |
 | Undo an edit | Press **Ctrl+Z**. Finish or cancel an active draft or stroke first. |
 | Show or hide the Inspector | Press **Ctrl+I**; the last tab is remembered. |
@@ -113,18 +123,7 @@ A **location** describes a kind of place, such as Outside settlements or Residen
 
 Check **View > Ground Level** before a game trial. Use **Tools > Set Ground Level…** if the building meets the world terrain at the wrong height. Road-exit markers can request a wilderness approach; several markers give the generator a choice, not a promise of several roads.
 
-## What's new in 0.2.2 — Forge Edition
-
-This update adds a full painting workspace and practical measurement helpers, along with smoother everyday controls.
-
-- **Paint · Area · Fill · Mosaic · Pick · Eraser:** dedicated tools with clear target outlines and custom cursors. Paint and Eraser work while you drag, with one Undo step per stroke.
-- **More control over finishing:** Face/Block coverage where supported, square or line-shaped area stamps, connected-surface choices, a starting-plane lock and horizontal/vertical brush strokes.
-- **Pictures made from game paints:** load a PNG/JPEG once, choose a wall rectangle and compare Fit/Crop/Stretch, colour/grayscale, detail and blending options before applying one Undo step.
-- **Measurements:** a draggable ruler, six-axis laser level and XZ/XY/YZ construction guides with a 1 m base scale. These are session helpers, not objects added to the prefab.
-- **Camera and Inspector:** number-pad views, perspective/orthographic switching, a saved camera view beside each saved prefab, remembered Inspector width/tab and a full-width status bar.
-- **Workflow fixes:** dialogs give back the mouse after flying; Undo/Redo keep the placement tool ready when its source is still valid; V remembers shape searches; right click opens compact paint settings.
-
-[Read the full 0.2.2 release notes](https://github.com/xvgray/superdummy-releases/releases/tag/v0.2.2) · [Changelog](CHANGELOG.md)
+## Screenshots
 
 ### Measurements in the editor
 
@@ -184,14 +183,14 @@ The English guide explains the controls, saving and how to put your first buildi
 - **8 GB RAM minimum; 16 GB recommended.**
 - Your own, compatible installation of **7 Days to Die**. Game files and assets are not included.
 
-**Development baseline and reported game checks: 7 Days to Die V 3.3.0 (b18).** Development checks covered the reported editing cases and generated POIs with corrected ground level and road connections. This is not exhaustive verification of every model, mod or placement rule. Detecting an installation alone does not prove compatibility.
+**Game-data baseline: 7 Days to Die 3.3.0 (b18).** Earlier game checks covered sample POIs with corrected ground level and road connections. The new 0.2.3 tools were checked in the editor as development progressed.
 
 <details>
 <summary>Other limits worth knowing</summary>
 
 
 - Mod-added block definitions and assets are not loaded; local prefabs use the base game's blocks and assets.
-- SuperDummy does not simulate AI, structural collapse, electrical networks or actual spawn behaviour. Sleeper previews do not predict the exact enemies spawned.
+- The structural preview estimates support. Collapse, AI, electrical networks and actual enemy spawns are simulated by the game.
 - Powered-device editing and the elevator test door profile are outside the non-powered door workflow.
 - Some separate canvas-sign libraries have explicit save restrictions. Export does not generate distant `.mesh` / `.ins` files.
 - Modded world-placement rule order is not fully analysed; reported Forest/Snow placement is not exhaustive proof of exclusion from other biomes.
@@ -218,8 +217,6 @@ The application source is kept in a separate private repository. This public pag
 ## What I'm working toward
 
 I'm continuing to develop SuperDummy toward the tools available in the game's own prefab editor — and additional features beyond them. Making building clearer, faster and more comfortable is just as important as adding missing features. Work continues on new tools, bug fixes and a friendlier everyday workflow; these are development goals, not features already available in 0.2.
-
-**Next in development: 0.2.3.** Structural-stability previews, block HP and damaged-door models, and shared Studio controls are implemented in the development build. Region selection is being refined, with group Delete/Copy/Move planned next. This update is not released yet; the current download remains 0.2.2.
 
 See the [roadmap](ROADMAP.md) for released features and the next planned steps.
 
